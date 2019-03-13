@@ -10,11 +10,11 @@
   import navigtor from './components/global/Navigtor';
   import pageFooter from './components/global/PageFooter'
   export default {
-    components:{
-      navigtor,pageFooter
+    components: {
+      navigtor,
+      pageFooter
     },
-    mounted() {
-    }
+    mounted() {}
   }
 </script>
 
@@ -31,5 +31,35 @@
     top: 0;
     left: 0;
     overflow: auto;
+    .navigator {
+      .van-popup {
+        width: 540px;
+        height: 100%;
+      }
+      .van-collapse-item {
+        border:none;
+        >.van-cell {
+          margin-top:35px;
+          &:after {
+            border: none;
+          }
+        }
+      }
+      .van-collapse {
+        border: none;
+      }
+    }
+    .van-list__finished-text,
+    .van-list__loading {
+      height: 102px!important;
+      line-height: 102px!important;
+      font-size: 24px;
+      color: #bbb;
+      >.van-loading {
+        width: 24px;
+        height: 24px;
+        margin-right: 12px;
+      }
+    }
   }
 </style>
