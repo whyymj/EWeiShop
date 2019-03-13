@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <navigtor></navigtor>
     <router-view/>
+    <page-footer></page-footer>
   </div>
 </template>
 
 <script>
+  import navigtor from './components/global/Navigtor';
+  import pageFooter from './components/global/PageFooter'
   export default {
-    mounted(){
-      // document.dispatchEvent(new Event('custom-render-trigger'))
+    components:{
+      navigtor,pageFooter
+    },
+    mounted() {
     }
   }
 </script>
@@ -23,15 +25,11 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-  }
-  #nav {
-    padding: 30px;
-    a {
-      font-weight: bold;
-      color: #2c3e50;
-      &.router-link-exact-active {
-        color: #42b983;
-      }
-    }
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
   }
 </style>
