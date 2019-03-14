@@ -2,7 +2,7 @@
     <ul class='ai-vip-items'>
         <li class='ai-vip-items__item' v-for='(item,index) in itemList' :key='index'>
             <div class='ai-vip-items__item__title'>
-                <img :src="item.img" :alt="item.itle"><span>{{item.title}}</span>
+                <img v-lazy="item.img" :alt="item.itle"><span>{{item.title}}</span>
             </div>
             <span class='ai-vip-items__item__body'>{{item.detail}}</span>
         </li>
@@ -14,15 +14,15 @@
         data() {
             return {
                 itemList: [{
-                    img: require('../../assets/image/index/vip_icon_1.png'),
+                    img: '/static/image/index/vip_icon_1.png',
                     title: '会员管理',
                     detail: '轻松维护管理会员'
                 }, {
-                    img: require('../../assets/image/index/vip_icon_2.png'),
+                    img: '/static/image/index/vip_icon_2.png',
                     title: '会员营销',
                     detail: '专属营销解决方案'
                 }, {
-                    img: require('../../assets/image/index/vip_icon_3.png'),
+                    img: '/static/image/index/vip_icon_3.png',
                     title: '会员标签',
                     detail: '实现个性化营销'
                 }, ]

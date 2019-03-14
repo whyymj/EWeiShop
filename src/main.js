@@ -6,19 +6,21 @@ import MetaInfo from 'vue-meta-info'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css';
 import 'vant/lib/index.css';
-import VueLazyload from 'vue-lazyload'
- 
-Vue.use(VueLazyload)
+import {
+  Lazyload
+} from 'vant';
+
+// options 为可选参数，无则不传
+Vue.use(Lazyload, {
+  preLoad: 1.3,
+  loading: '/static/image/loading.png',
+  error: '/static/image/loading.png',
+  attempt: 1
+});
 Vue.use(VueAwesomeSwiper, /* { default global options } */ )
 Vue.use(MetaInfo)
 Vue.config.productionTip = false
-// or with options
-Vue.use(VueLazyload, {
-  preLoad: 1.3,
-  error: 'dist/error.png',
-  loading: 'dist/loading.gif',
-  attempt: 1
-})
+
 new Vue({
   router,
   render: h => h(App)

@@ -10,7 +10,7 @@
         <!-- 智能会员管理     -->
         <div class="AI-vip-management">
             <page-info theme='智能会员管理' detail='让您更了解会员的消费习惯'>
-                <img class="AI-vip-management__bg-img" src="@/assets/image/index/vip-pic.png" alt="智能会员管理">
+                <img class="AI-vip-management__bg-img" v-lazy='"/static/image/index/vip-pic.png"' alt="智能会员管理">
                 <ai-vip-items></ai-vip-items>
             </page-info>
         </div>

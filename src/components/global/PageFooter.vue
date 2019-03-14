@@ -1,7 +1,7 @@
 <template>
     <nav class='navigator'>
         <div class="navigator__logo">
-            <img src="@/assets/image/global/nav_logo.png" class='navigator__logo__img' alt="">
+            <img v-lazy="'/static/image/global/nav_logo.png'" class='navigator__logo__img' alt="">
         </div>
         <div class="navigator__body">
             <h3>解决方案</h3>
@@ -28,7 +28,7 @@
             <span>©2016-2018鲁ICP备18044507号</span>
         </div>
         <div class="navigator__adv">
-            <img src="@/assets/image/index/phone_.png" class='navigator__adv__phone' alt="">
+            <img v-lazy="'/static/image/index/phone_.png'" class='navigator__adv__phone' alt="">
             <span class='navigator__adv__callus'>联系我们 &nbsp; 免费试用</span>
         </div>
     </nav>

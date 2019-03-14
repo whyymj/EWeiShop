@@ -3,7 +3,7 @@
         <page-info theme='一站式电商服务' detail='让您轻松进军新零售社交电商'>
             <ul class='one-stop-service__list'>
                 <li v-for='(item,index) in list' :key='index'>
-                    <img :src="item.img" :alt="item.detail">
+                    <img v-lazy="item.img" :alt="item.detail">
                     <h6>{{item.title}}</h6>
                     <span>{{item.detail}}</span>
                 </li>
@@ -21,15 +21,15 @@
         data() {
             return {
                 list: [{
-                    img: require('../../assets/image/index/one_step-1.png'),
+                    img: '/static/image/index/one_step-1.png',
                     title: '我们的优势',
                     detail: '支持个性化定制开发，近4年移动电商开发经验'
                 }, {
-                    img: require('../../assets/image/index/one_step-2.png'),
+                    img: '/static/image/index/one_step-2.png',
                     title: '我们的服务',
                     detail: '以用户为中心，为您提供有针对性的电商解决方案'
                 }, {
-                    img: require('../../assets/image/index/one_step-3.png'),
+                    img: '/static/image/index/one_step-3.png',
                     title: '我们的特色',
                     detail: '采用最新的研发技术，确保用户体验更流畅稳定'
                 }]

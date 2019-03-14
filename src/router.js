@@ -40,9 +40,17 @@ export default new Router({
       component: () => import('./views/GroupBuy.vue')
     },
     {
-      path: '/test',
-      name: 'test',
-      component: () => import( /* webpackChunkName: "about" */ './views/Test.vue')
+      path: '/spike',
+      name: 'Spike',
+      component: () => import('./views/Spike.vue')
+    }, {
+      path: '/renovation',
+      name: 'Renovation',
+      component: () => import('./views/Renovation.vue')
+    },{
+      path: '/social-contact',
+      name: 'Renovation',
+      component: () => import('./views/SocialContact.vue')
     }
   ]
 })

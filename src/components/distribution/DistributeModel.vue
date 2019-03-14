@@ -3,7 +3,7 @@
         <page-info theme='出色的三级分销模式' detail='多触点推广，全网裂变式传播的营销体系' :detail-style='detailStyle'></page-info>
         <ul class='distribute-model__list'>
             <li class='distribute-model__list__item' v-for='(item,index) in list' :key='index'>
-                <img :src="item.img" :alt="item.detail">
+                <img v-lazy="item.img" :alt="item.detail">
                 <h4>{{item.title}}</h4>
                 <span>{{item.detail}}</span>
             </li>
@@ -23,19 +23,19 @@
                     color: '#5d6494'
                 },
                 list: [{
-                    img: require('../../assets/image/distribution_scheme/bg_img_1.png'),
+                    img: '/static/image/distribution_scheme/bg_img_1.png',
                     title: '全网裂变式传播',
                     detail: '迅速提升品牌影响力'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/bg_img_2.png'),
+                    img: '/static/image/distribution_scheme/bg_img_2.png',
                     title: '佣金奖励机制',
                     detail: '提升分销商宣传积极性'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/bg_img_3.png'),
+                    img:'/static/image/distribution_scheme/bg_img_3.png',
                     title: '灵活分销管理',
                     detail: '轻松管理成千上万的代理商'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/bg_img_4.png'),
+                    img: '/static/image/distribution_scheme/bg_img_4.png',
                     title: '强大的分销体系',
                     detail: '扩大影响力低成本快速销货'
                 }]

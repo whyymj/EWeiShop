@@ -20,6 +20,8 @@
 
 <style lang="scss">
   #app {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -30,16 +32,15 @@
     height: 100%;
     top: 0;
     left: 0;
-    overflow: auto;
     .navigator {
       .van-popup {
         width: 540px;
         height: 100%;
       }
       .van-collapse-item {
-        border:none;
+        border: none;
         >.van-cell {
-          margin-top:35px;
+          margin-top: 35px;
           &:after {
             border: none;
           }

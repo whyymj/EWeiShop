@@ -4,7 +4,7 @@
             <h2>产品中心-拼团</h2>
             <span>社交电商时代营销利器，快速扩张，帮您降低库存回笼资金</span>
         </div>
-        <img src="@/assets/image/assemble/banner_img.png" class='brief-bg__img' alt="">
+        <img v-lazy="'/static/image/assemble/banner_img.png'" class='brief-bg__img' alt="">
     </div>
 </template>
 

@@ -4,7 +4,7 @@
             <h2>新零售解决方案</h2>
             <span>整合全渠道资源为您建立闭合的社交电商生态圈</span>
         </div>
-        <img src="@/assets/image/distribution_scheme/banner_img.png" class='brief-bg__img' alt="">
+        <img v-lazy="'/static/image/distribution_scheme/banner_img.png'" class='brief-bg__img' alt="整合全渠道资源为您建立闭合的社交电商生态圈">
     </div>
 </template>
 

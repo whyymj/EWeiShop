@@ -6,7 +6,7 @@
                     <h2>{{item.theme}}</h2>
                     <span>{{item.detail}}</span>
                 </div>
-                <img :src="item.img" class='brief-bg__img' alt="">
+                <img v-lazy="item.img" class='brief-bg__img' alt="">
             </swipe-item>
             <div class="custom-indicator" slot="indicator">
                 <span class="point point1" v-for="(item,index) in swipeList" :key='index' :class='{"active-point":index==current}'></span>
@@ -35,15 +35,15 @@
                     textAlign: 'left'
                 },
                 swipeList: [{
-                    img: require('@/assets/image/index/banner_img.png'),
+                    img: '/static/image/index/banner_img.png',
                     theme: '新零售社交分销商城',
                     detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
                 }, {
-                    img: require('@/assets/image/index/banner_img.png'),
+                    img: '/static/image/index/banner_img.png',
                     theme: '新零售社交分销商城',
                     detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
                 }, {
-                    img: require('@/assets/image/index/banner_img.png'),
+                    img: '/static/image/index/banner_img.png',
                     theme: '新零售社交分销商城',
                     detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
                 }]

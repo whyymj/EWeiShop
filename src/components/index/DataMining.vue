@@ -2,7 +2,7 @@
     <div class='data-mining'>
         <ul class='data-mining__slider'>
             <li v-for='(item,index) in list' :key='index' class='data-mining__slider__item'>
-                <img :src="item.img" alt="" class='data-mining__slider__item__icon'>
+                <img v-lazy="item.img" alt="" class='data-mining__slider__item__icon'>
                 <span class='data-mining__slider__item__theme'>{{item.theme}}</span>
                 <span class='data-mining__slider__item__detail'>{{item.detail}}</span>
                 <a class='data-mining__know-more'>了解更多</a>
@@ -16,16 +16,16 @@
         data() {
             return {
                 list: [{
-                        img: require('@/assets/image/index/fangan1.png'),
+                        img: '/static/image/index/fangan1.png',
                         theme: '新零售解决方案',
                         detail: "整合多渠道资源，无缝对接线上商城与线下门店"
                     },
                     {
-                        img: require('@/assets/image/index/fangan2.png'),
+                        img: '/static/image/index/fangan2.png',
                         theme: '社交电商解决方案',
                         detail: "整合多渠道资源，无缝对接线上商城与线下门店"
                     }, {
-                        img: require('@/assets/image/index/fangan3.png'),
+                        img: '/static/image/index/fangan3.png',
                         theme: '分销解决方案',
                         detail: "整合多渠道资源，无缝对接线上商城与线下门店"
                     }

@@ -1,7 +1,7 @@
 <template>
     <div class='excitation'>
         <page-info theme='多样化分销激励机制' detail='轻松带领成千上万粉丝为您销售商品'>
-            <img class='excitation-bgimg' src="../../assets/image/distribution_scheme/distribution.png" alt="轻松带领成千上万粉丝为您销售商品">
+            <img class='excitation-bgimg' v-lazy="'/static/image/distribution_scheme/distribution.png'" alt="轻松带领成千上万粉丝为您销售商品">
         </page-info>
     </div>
 </template>

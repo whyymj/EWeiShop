@@ -1,7 +1,7 @@
 <template>
     <ul class='img-list'>
         <li v-for='(item,index) in imgList' class='img-list__item' :key='index'>
-            <img :src="item.img" class='img-list__item__img' alt="">
+            <img v-lazy="item.img" class='img-list__item__img' alt="">
             <span class='img-list__item__title' v-html='item.title'></span>
             <span class='img-list__item__content' v-html='item.content'></span>
         </li>
@@ -13,15 +13,15 @@
         data() {
             return {
                 imgList: [{
-                    img: require('@/assets/image/new-retail/icon1.png'),
+                    img: '/static/image/new-retail/icon1.png',
                     title: '线上线下管理',
                     content: '突破空间限制<br/>快速开店统一管理'
                 }, {
-                    img: require('@/assets/image/new-retail/icon2.png'),
+                    img: '/static/image/new-retail/icon2.png',
                     title: '会员资源互通',
                     content: '会员数据互通<br/>轻松导入会员引流'
                 }, {
-                    img: require('@/assets/image/new-retail/icon3.png'),
+                    img: '/static/image/new-retail/icon3.png',
                     title: '促活商城',
                     content: '丰富营销玩法促活促进订单达成'
                 }]

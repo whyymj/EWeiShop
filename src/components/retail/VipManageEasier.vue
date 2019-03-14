@@ -3,11 +3,11 @@
         <swipe :autoplay="3000" style='height:100%;' indicator-color="white" @change="onChange">
             <swipe-item class='vip-manage-easier__swipe-item'>
                 <page-info theme='会员管理更便捷' :detail-style='detailLeftAlign' detail='会员信息一目了然，会员消费标签支持自动生成定制专属会员营销方案'></page-info>
-                <img class='vip-manage-easier__img' src="@/assets/image/new-retail/img_4.png" alt="">
+                <img class='vip-manage-easier__img' v-lazy='"/static/image/new-retail/img_4.png"' alt="">
             </swipe-item>
             <swipe-item class='vip-manage-easier__swipe-item'>
                 <page-info theme='会员管理更便捷' :detail-style='detailLeftAlign' detail='会员信息一目了然，会员消费标签支持自动生成定制专属会员营销方案'></page-info>
-                <img class='vip-manage-easier__img' src="@/assets/image/new-retail/img_4.png" alt="">
+                <img class='vip-manage-easier__img' v-lazy='"/static/image/new-retail/img_4.png"' alt="">
             </swipe-item>
             <div class="custom-indicator" slot="indicator">
                 <span class="point point1" :class='{"active-point":current==0}'></span>

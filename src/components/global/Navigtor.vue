@@ -1,42 +1,42 @@
 <template>
     <div class='navigator'>
-        <img src="@/assets/image/global/nav_logo.png" class='navigator__logo' alt="">
-        <img src="@/assets/image/global/nav_btn.png" class='navigator__btn' @click='showNav' alt="">
+        <img v-lazy="'/static/image/global/nav_logo.png'" class='navigator__logo' alt="">
+        <img v-lazy="'/static/image/global/nav_btn.png'" class='navigator__btn' @click='showNav' alt="">
         <Popup position="right" v-model="show">
-            <nav class='nav'>
+            <nav class='nav' @click='routeTo'>
                 <div class="nav__logo">
-                    <img class='nav__logo__logo' :src="logo" alt="eweishop logo">
-                    <img class='nav__logo__close' :src="close" alt="close navigator">
+                    <img class='nav__logo__logo' v-lazy="logo" alt="eweishop logo">
+                    <img class='nav__logo__close' v-lazy="close" alt="close navigator">
                 </div>
-                <h2 class='nav__title'>首页</h2>
+                <h2 class='nav__title' data-nav='/'>首页</h2>
                 <collapse v-model="activeNames" @change='change'>
                     <collapse-item name="1">
-                        <img :src="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("1")>-1}' slot='right-icon' alt=""> <span class='sub-title' slot='title'>解决方案</span>
+                        <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("1")>-1}' slot='right-icon' alt=""> <span class='sub-title' slot='title'>解决方案</span>
                         <ul class='programs'>
-                            <li>新零售解决方案</li>
-                            <li>社交电商解决方案</li>
-                            <li>分销解决方案</li>
+                            <li data-nav='/new-retail'>新零售解决方案</li>
+                            <li data-nav='/social-contact'>社交电商解决方案</li>
+                            <li data-nav='/distribution'>分销解决方案</li>
                         </ul>
                     </collapse-item>
                     <collapse-item name="2">
-                        <img :src="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("2")>-1}' slot='right-icon' alt=""> <span class='sub-title' slot='title'>产品中心</span>
+                        <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("2")>-1}' slot='right-icon' alt=""> <span class='sub-title' slot='title'>产品中心</span>
                         <ul class='programs'>
-                            <li>店铺装修</li>
-                            <li>拼团</li>
-                            <li>秒杀</li>
+                            <li data-nav='/renovation'>店铺装修</li>
+                            <li data-nav='/group-buy'>拼团</li>
+                            <li data-nav='/spike'>秒杀</li>
                         </ul>
                     </collapse-item>
                     <collapse-item name="3">
-                        <img :src="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("3")>-1}' slot='right-icon' alt=""> <span class='sub-title' slot='title'>新闻中心</span>
+                        <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("3")>-1}' slot='right-icon' alt=""> <span class='sub-title' slot='title'>新闻中心</span>
                         <ul class='programs'>
-                            <li>产品发布</li>
-                            <li>最新动态</li>
-                            <li>更新日志</li>
+                            <li data-nav='/'>产品发布</li>
+                            <li data-nav='/'>最新动态</li>
+                            <li data-nav='/'>更新日志</li>
                         </ul>
                     </collapse-item>
                 </collapse>
-                <h2 class='nav__title nav__title--help'>帮助中心</h2>
-                <h2 class='nav__title nav__title--about-us'>关于我们</h2>
+                <h2 class='nav__title nav__title--help' data-nav='/'>帮助中心</h2>
+                <h2 class='nav__title nav__title--about-us' data-nav='/aboutus'>关于我们</h2>
             </nav>
         </Popup>
     </div>
@@ -60,10 +60,9 @@
         data() {
             return {
                 show: false,
-                logo: require('../../assets/image/global/nav_logo.png'),
-                close: require('../../assets/image/global/x.png'),
-                arrowDown: require('../../assets/image/global/arrow-down.png'),
-                // arrowUp: require('../../assets/image/global/arrow-up.png'),
+                logo: '/static/image/global/nav_logo.png',
+                close: '/static/image/global/x.png',
+                arrowDown: '/static/image/global/arrow-down.png',
                 activeNames: ['1']
             }
         },
@@ -73,7 +72,19 @@
             },
             change(val) {
                 this.activeNames = val;
-                console.log('val>>', val)
+            },
+            routeTo(page) {
+                /**
+                 * 路由跳转事件
+                 */
+                if (page.target.dataset && page.target.dataset.nav) {
+                    let nav = page.target.dataset.nav;
+                    if (nav != this.$route.path) {
+                        this.$router.push({
+                            path: nav
+                        })
+                    }
+                }
             }
         }
     }

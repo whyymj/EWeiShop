@@ -1,10 +1,10 @@
 <template>
     <div class='character'>
-        <img class='character__bg' src="../../assets/image/distribution_scheme/daili_background.png" alt="">
+        <img class='character__bg' v-lazy="'/static/image/distribution_scheme/daili_background.png'" alt="">
         <page-info theme='出色的三级分销模式' :theme-style='detailStyle' detail='多触点推广，全网裂变式传播的营销体系' :detail-style='detailStyle'>
             <ul class='character__list'>
                 <li class='character__list__item' v-for='(item,index) in list' :key='index'>
-                    <img class='character__list__item__icon' :src="item.img" :alt="item.detail">
+                    <img class='character__list__item__icon' v-lazy="item.img" :alt="item.detail">
                     <span class='character__list__item__detail' v-html='item.detail'></span>
                 </li>
             </ul>
@@ -24,19 +24,19 @@
                     color: '#fff'
                 },
                 list: [{
-                    img: require('../../assets/image/distribution_scheme/character-1.png'),
+                    img: '/static/image/distribution_scheme/character-1.png',
                     detail: '快速拓客吸粉<br/>轻松卖货无压力'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/character-2.png'),
+                    img: '/static/image/distribution_scheme/character-2.png',
                     detail: '疯狂社交传播<br/>交易倍增提升影响'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/character-3.png'),
+                    img: '/static/image/distribution_scheme/character-3.png',
                     detail: '分销商拥挤机制提高推广积极性'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/character-4.png'),
+                    img: '/static/image/distribution_scheme/character-4.png',
                     detail: '投入成本少<br/>宣传力度广'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/character-5.png'),
+                    img: '/static/image/distribution_scheme/character-5.png',
                     detail: '建立庞大销售网络快速销货'
                 }]
             }

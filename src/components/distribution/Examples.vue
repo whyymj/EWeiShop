@@ -3,7 +3,7 @@
         <page-info theme='典型分销案例' detail=''>
             <ul class='examples-list'>
                 <li class='examples-list__item' v-for='(item,index) in list' :key='index'>
-                    <img :src="item.img" :alt="item.alt">
+                    <img v-lazy="item.img" :alt="item.alt">
                 </li>
             </ul>
         </page-info>
@@ -19,28 +19,28 @@
         data() {
             return {
                 list: [{
-                    img: require('../../assets/image/distribution_scheme/exmp1.png'),
+                    img: '/static/image/distribution_scheme/exmp1.png',
                     alt: '花点时间'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/exmp2.png'),
+                    img: '/static/image/distribution_scheme/exmp2.png',
                     alt: '每日优鲜'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/exmp3.png'),
+                    img: '/static/image/distribution_scheme/exmp3.png',
                     alt: '淑女屋'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/exmp4.png'),
+                    img: '/static/image/distribution_scheme/exmp4.png',
                     alt: '蒙牛'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/exmp5.png'),
+                    img: '/static/image/distribution_scheme/exmp5.png',
                     alt: '中粮'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/exmp6.png'),
+                    img: '/static/image/distribution_scheme/exmp6.png',
                     alt: '哇哈哈'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/exmp7.png'),
+                    img: '/static/image/distribution_scheme/exmp7.png',
                     alt: '老板'
                 }, {
-                    img: require('../../assets/image/distribution_scheme/exmp8.png'),
+                    img: '/static/image/distribution_scheme/exmp8.png',
                     alt: '切糕王子'
                 }, ]
             }

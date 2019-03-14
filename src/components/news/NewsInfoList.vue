@@ -1,7 +1,7 @@
 <template>
     <list class='news-info' v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
         <div class='news-info__item' v-for='(item,index) in list' :key='index'>
-            <img :src="item.img" alt="">
+            <img v-lazy="item.img" alt="">
             <h3>{{item.title}}</h3>
             <p class="news-info__item__keywords">
                 <span class="news-info__item__keywords__word" v-for='(val,key) in item.keyWords' :key='key'>{{val}}</span>
@@ -23,7 +23,7 @@
         data() {
             return {
                 list: [{
-                    img: require('../../assets/image/index/index-p_03.png'),
+                    img: '/static/image/index/index-p_03.png',
                     title: '2018年即将逝去,期待新年再创奇迹,你好,2019',
                     keyWords: ['最新动态'],
                     time: '01-24'
@@ -37,7 +37,7 @@
                 // 异步更新数据
                 setTimeout(() => {
                     this.list.push({
-                        img: require('../../assets/image/index/index-p_03.png'),
+                        img: '/static/image/index/index-p_03.png',
                         title: '2018年即将逝去,期待新年再创奇迹,你好,2019',
                         keyWords: ['最新动态'],
                         time: '01-24'

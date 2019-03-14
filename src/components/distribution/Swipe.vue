@@ -2,10 +2,10 @@
     <div class='vip-manage-easier'>
         <swipe :autoplay="3000" style='height:100%;' indicator-color="white" @change="onChange">
             <swipe-item class='vip-manage-easier__swipe-item'>
-                <img class='vip-manage-easier__img' src="../../assets/image/distribution_scheme/img1.png" alt="">
+                <img class='vip-manage-easier__img' v-lazy="'/static/image/distribution_scheme/img1.png'" alt="">
             </swipe-item>
             <swipe-item class='vip-manage-easier__swipe-item'>
-                 <img  class='vip-manage-easier__img' src="../../assets/image/distribution_scheme/img2.png" alt="">
+                 <img  class='vip-manage-easier__img' v-lazy="'/static/image/distribution_scheme/img2.png'" alt="">
             </swipe-item>
             <div class="custom-indicator" slot="indicator">
                 <span class="point point1" :class='{"active-point":current==0}'></span>

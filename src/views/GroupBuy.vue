@@ -10,6 +10,10 @@
         <wake></wake>
         <!-- 拼团页面展示 -->
         <show></show>
+        <!-- EWEISHOP拼团的特色 -->
+        <character></character>
+        <!-- 解决三大拼团活动通痛点 -->
+        <painer></painer>
     </div>
 </template>
 
@@ -19,13 +23,17 @@
     import share from '../components/group-buy/Share.vue'
     import wake from '../components/group-buy/Wake.vue'
     import show from '../components/group-buy/Show.vue'
+    import character from '../components/group-buy/Character.vue'
+    import painer from '../components/group-buy/Painer.vue'
     export default {
         components: {
             pageBrief,
             reflow,
             share,
             wake,
-            show
+            show,
+            character,
+            painer
         }
     }
 </script>

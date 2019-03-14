@@ -1,7 +1,7 @@
 <template>
     <ul class='news-info'>
         <li class='news-info__item' v-for='(item,index) in newsList' :key='index'>
-            <img :src="item.img" alt="">
+            <img v-lazy="item.img" alt="">
             <h3>{{item.title}}</h3>
             <p class="news-info__item__keywords">
                 <span class="news-info__item__keywords__word" v-for='(val,key) in item.keyWords' :key='key'>{{val}}</span>
@@ -16,7 +16,7 @@
         data() {
             return {
                 newsList: [{
-                    img: require('../../assets/image/index/index-p_03.png'),
+                    img: '/static/image/index/index-p_03.png',
                     title: '2018年即将逝去,期待新年再创奇迹,你好,2019',
                     keyWords: ['最新动态'],
                     time: '01-24'
