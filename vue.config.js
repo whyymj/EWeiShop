@@ -6,8 +6,8 @@ const postcss = px2rem({
 })
 const PrerenderSPAPlugin = require('prerender-spa-plugin')
 module.exports = {
-    
- lintOnSave: false,
+
+    lintOnSave: false,
     css: {
         loaderOptions: {
             postcss: {
@@ -23,7 +23,7 @@ module.exports = {
                 // Required - The path to the webpack-outputted app to prerender.
                 staticDir: path.join(__dirname, 'dist'),
                 // Required - Routes to render.
-                routes: ['/', '/about'],
+                routes: ['/', '/new-retail', '/aboutus', '/news', '/news-detail', '/distribution', '/group-buy', '/spike', '/renovation', '/social-contact', '/service'],
             })
         ]
     }

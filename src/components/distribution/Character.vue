@@ -1,7 +1,7 @@
 <template>
     <div class='character'>
         <img class='character__bg' v-lazy="'/static/image/distribution_scheme/daili_background.png'" alt="">
-        <page-info theme='出色的三级分销模式' :theme-style='detailStyle' detail='多触点推广，全网裂变式传播的营销体系' :detail-style='detailStyle'>
+        <page-info theme='EWEISHOP分销的特色' :theme-style='detailStyle' detail='轻松带领成千上万粉丝为您销售商品' :detail-style='detailStyle'>
             <ul class='character__list'>
                 <li class='character__list__item' v-for='(item,index) in list' :key='index'>
                     <img class='character__list__item__icon' v-lazy="item.img" :alt="item.detail">

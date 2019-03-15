@@ -2,7 +2,7 @@
     <list class='news-info' v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
         <h3 class='other-news-title'>相关文章</h3>
         <div class='news-info__item' v-for='(item,index) in list' :key='index'>
-            <img v-lazy="item.img" alt="">
+            <img v-lazy="item.img" :alt="item.title">
             <h3>{{item.title}}</h3>
             <p class="news-info__item__keywords">
                 <span class="news-info__item__keywords__word" v-for='(val,key) in item.keyWords' :key='key'>{{val}}</span>
@@ -91,7 +91,7 @@
             margin: auto;
             box-sizing: border-box;
             height: 185px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #eee;/*no*/
             position: relative;
             >img {
                 position: absolute;

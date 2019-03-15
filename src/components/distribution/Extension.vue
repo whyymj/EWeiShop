@@ -18,7 +18,8 @@
             return {
                 detailStyle: {
                     color:'#5d6494',
-                    textAlign:'left'
+                    textAlign:'left',
+                    marginTop:'18px'
                 }
             }
         },

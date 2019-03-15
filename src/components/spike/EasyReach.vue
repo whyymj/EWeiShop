@@ -5,7 +5,7 @@
                 <li class='easy-reach-list__item' v-for='(item,index) in list' :key='index'>
                     <img class='easy-reach-list__item__icon' v-lazy="item.img" :alt="item.detail">
                     <h6 class='easy-reach-list__item__title'>{{item.title}}</h6>
-                    <span class='easy-reach-list__item__detail'>{{item.detail}}</span>
+                    <span class='easy-reach-list__item__detail' v-html='item.detail'></span>
                 </li>
             </ul>
         </page-info>
@@ -22,20 +22,20 @@
             return {
                 list: [{
                     img: '/static/image/spike/focus1.png',
-                    title: '吸粉难',
-                    detail: '秒杀帮您快速积聚粉丝提升影响力'
+                    title: '秒杀活动预热',
+                    detail: '增加店铺粉丝<br/>提升店铺品牌关注度'
                 }, {
                     img: '/static/image/spike/focus2.png',
-                    title: '库存多',
-                    detail: '秒杀可刺激用户下单缓解库存压力'
+                    title: '独立库存',
+                    detail: '合理调控库存<br/>解决库存积压'
                 }, {
                     img: '/static/image/spike/focus3.png',
-                    title: '吸粉难',
-                    detail: '秒杀快速吸引线上流量促活会员'
+                    title: '营销必备利器',
+                    detail: '吸引更多会员<br/>带动店铺整体销量'
                 }, {
                     img: '/static/image/spike/focus4.png',
-                    title: '吸粉难',
-                    detail: '秒杀可带动其他商品成单提升营业额'
+                    title: '独立秒杀价格',
+                    detail: '便于您进行秒杀商品管理<br/>产生更多订单'
                 }, ]
             }
         },
@@ -61,7 +61,8 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 background: #fff;
-                box-shadow: #e5e4e4 0 0 16px 50%;
+                box-shadow: rgba(229,228,228,.5) 0 0 16px ;
+                border-radius: 10px;
                 >.easy-reach-list__item__icon {
                     width: 168px;
                     height: 168px;
@@ -77,7 +78,7 @@
                     font-weight: 500;
                 }
                 >.easy-reach-list__item__detail {
-                    width: 260px;
+                    width: 100%;
                     font-size: 24px;
                     text-align: center;
                     color: #7b88a2;

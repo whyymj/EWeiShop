@@ -1,11 +1,11 @@
 <template>
-    <div class='show-swiper-box'>
+    <div class='group-buy--show-swiper-box'>
         <div class='show-swiper'>
             <swiper :options="swiperOption" ref="mySwiper">
                 <!-- slides -->
-                <swiper-slide><img v-lazy="'/static/image/distribution_scheme/group1.png'" alt=""><span>拼团商品详情</span></swiper-slide>
-                <swiper-slide><img v-lazy="'/static/image/distribution_scheme/group2.png'" alt=""><span>拼团支付成功</span></swiper-slide>
-                <swiper-slide><img v-lazy="'/static/image/distribution_scheme/group3.png'" alt=""><span>拼团商品列表</span></swiper-slide>
+                <swiper-slide><img v-lazy="'/static/image/distribution_scheme/group1.png'" alt="拼团商品详情"><span>拼团商品详情</span></swiper-slide>
+                <swiper-slide><img v-lazy="'/static/image/distribution_scheme/group2.png'" alt="拼团支付成功"><span>拼团支付成功</span></swiper-slide>
+                <swiper-slide><img v-lazy="'/static/image/distribution_scheme/group3.png'" alt="拼团商品列表"><span>拼团商品列表</span></swiper-slide>
             </swiper>
         </div>
         <div class="show-swiper__pagination">
@@ -78,7 +78,7 @@
 </script>
 
 <style lang='scss'>
-    .show-swiper-box {
+    .group-buy--show-swiper-box {
         overflow: hidden;
         .show-swiper {
             width: 100%;

@@ -1,41 +1,59 @@
 <template>
-    <nav class='navigator'>
+    <footer class='navigator' id='navigator'>
         <div class="navigator__logo">
-            <img v-lazy="'/static/image/global/nav_logo.png'" class='navigator__logo__img' alt="">
+            <img v-lazy="'/static/image/global/nav_logo.png'" class='navigator__logo__img' alt="logo">
         </div>
-        <div class="navigator__body">
+        <div class="navigator__body" @click='routeTo'>
             <h3>解决方案</h3>
             <ul class='navigator__body__solution'>
-                <li>新零售解决方案</li>
-                <li>社交电商解决方案</li>
-                <li>分销解决方案</li>
+                <li data-nav='/new-retail'>新零售解决方案</li>
+                <li data-nav='/social-contact'>社交电商解决方案</li>
+                <li data-nav='/distribution'>分销解决方案</li>
             </ul>
             <h3>新闻中心</h3>
             <ul class='navigator__body__news-center'>
-                <li>产品发布</li>
-                <li>最新动态</li>
-                <li>更新日志</li>
+                <li data-nav='/new-prod'>产品发布</li>
+                <li data-nav='/new-info'>最新动态</li>
+                <li data-nav='/new-log'>更新日志</li>
             </ul>
             <h3>服务支持</h3>
             <ul class='navigator__body__servicen'>
-                <li>帮助中心</li>
-                <li>关于我们</li>
-                <li>人人商城</li>
+                <li data-nav='/service'>帮助中心</li>
+                <li data-nav='/aboutus'>关于我们</li>
+                <li @click='toRRSC'>人人商城</li>
             </ul>
         </div>
         <div class="navigator__statement">
             <span>青岛易联互动网络科技有限公司版权所有</span>
             <span>©2016-2018鲁ICP备18044507号</span>
-        </div>
-        <div class="navigator__adv">
-            <img v-lazy="'/static/image/index/phone_.png'" class='navigator__adv__phone' alt="">
-            <span class='navigator__adv__callus'>联系我们 &nbsp; 免费试用</span>
-        </div>
-    </nav>
+        </div> 
+    </footer>
 </template>
 
 <script>
-    export default {}
+    export default {
+        methods: {
+            curPage(path) {
+                return path == this.$route.path;
+            },
+            toRRSC() {
+                window.location.href = 'https://m.we7shop.com/index.html'
+            },
+            routeTo(page) {
+                /**
+                 * 路由跳转事件
+                 */
+                if (page.target.dataset && page.target.dataset.nav) {
+                    let nav = page.target.dataset.nav;
+                    if (nav != this.$route.path) {
+                        this.$router.push({
+                            path: nav
+                        })
+                    }
+                }
+            }
+        }
+    }
 </script>
 
 <style lang='scss' scoped>
@@ -52,7 +70,7 @@
         }
     }
     .navigator {
-        height: 780px;
+        height: 680px;
         width: 100%;
         overflow: hidden;
         background: #1c1c24;
@@ -101,7 +119,7 @@
             margin: auto;
             height: 132px;
             box-sizing: border-box;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);/*no*/
+            border-top: 1px solid rgba(255, 255, 255, 0.1);/*no*/ 
             padding: 36px 0 0 0;
             >span {
                 display: block;
@@ -111,47 +129,5 @@
                 text-align: center;
             }
         }
-        >.navigator__adv {
-            height: 98px;
-            width: 100%;
-            position: absolute;
-            overflow: hidden;
-            bottom: 0;
-            left: 0;
-            background: linear-gradient(135deg, #ff6231, #ff3636);
-            >.navigator__adv__phone {
-                position: absolute;
-                width: 40px;
-                height: 40px;
-                left: 140px;
-                top: 0;
-                bottom: 0;
-                margin: auto;
-            }
-            >.navigator__adv__callus {
-                line-height: 98px;
-                text-align: center;
-                width: 100%;
-                height: 100%;
-                float: left;
-                font-size: 36px;
-                color: #fff;
-            }
-            &:after {
-                content: '';
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-                background: rgba(0, 0, 0, 0.1);
-                width: 10px;
-                height: 10px;
-                border-radius: 50%;
-                animation: blink 2s ease  infinite;
-            }
-        }
     }
-
 </style>

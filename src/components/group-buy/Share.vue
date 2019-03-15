@@ -15,7 +15,8 @@
         data() {
             return {
                 detailStyle: {
-                    textAlign: 'left'
+                    textAlign: 'left',
+                      marginTop:'22px'
                 }
             }
         },

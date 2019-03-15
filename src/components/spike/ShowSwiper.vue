@@ -1,5 +1,5 @@
 <template>
-    <div class='show-swiper-box'>
+    <div class='spike--show-swiper-box'>
         <div class='show-swiper'>
             <swiper :options="swiperOption" ref="mySwiper">
                 <!-- slides -->
@@ -78,7 +78,7 @@
 </script>
 
 <style lang='scss'>
-    .show-swiper-box {
+    .spike--show-swiper-box {
         overflow: hidden;
         .show-swiper {
             width: 100%;

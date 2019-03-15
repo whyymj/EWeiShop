@@ -52,6 +52,7 @@
         position: relative;
         width: 100%;
         height: 895px;
+        -webkit-overflow-scrolling: touch;
         >.data-visible__bg-img {
             position: absolute;
             top: 0;
@@ -62,7 +63,8 @@
         .slider-container {
             width: 100%;
             overflow: auto;
-            margin-top:50px;
+            margin-top: 50px;
+             -webkit-overflow-scrolling: touch;
             >.items-slider {
                 width: 1880px;
                 display: flex;
@@ -95,12 +97,13 @@
                     >span {
                         position: absolute;
                         width: 490px;
-                        left:0;right:0;
+                        left: 0;
+                        right: 0;
                         margin: auto;
-                        top:480px;
+                        top: 480px;
                         font-size: 24px;
                         line-height: 38px;
-                        color:#a5a8bb;
+                        color: #a5a8bb;
                     }
                 }
             }

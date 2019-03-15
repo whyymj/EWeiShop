@@ -64,8 +64,7 @@
                 width: 176px;
                 height: 176px;
                 position: relative;
-                border: 1px solid #fafafa;
-                /*no*/
+                border: 1px solid #fafafa;/*no*/
                 box-sizing: border-box;
                 overflow: hidden;
                 >img {

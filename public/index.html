@@ -1,19 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <title>EWeiShop</title>
-    <link rel="stylesheet" href="/static/style/global.css">
-     
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but ewei-shop-official doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-    <script src='/static/js/rem.js' async></script>
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>EWeiShop</title>
+  <link rel="stylesheet" href="/static/style/global.css">
+  <style>
+    img[lazy='loading'] {
+      width: 24px !important;
+      height: 24px !important;
+    }
+
+    [class*=van-hairline]::after {
+      border: none !important;
+    }
+
+    .van-cell:not(:last-child)::after {
+      border: none !important;
+    }
+
+    #firstShow {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, .7);
+      transition: opacity .5s;
+      opacity: 1;
+    }
+
+    #firstShow>.firstShow__body {
+      position: absolute;
+      width: 100%;
+      height: 20px;
+      top: 45%;
+      display: flex;
+      justify-content: center;
+    }
+
+    #firstShow>.firstShow__body>span {
+      color: #f8572b;
+      margin-right: 10px;
+      font-size: 12px;
+      font-family:Verdana, Geneva, Tahoma, sans-serif;
+    
+    } 
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but ewei-shop-official doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <div id="firstShow">
+    <p class='firstShow__body'>
+      <span class='firstShow__body__loading1'>loading ...</span>
+    </p>
+  </div>
+  
+  <!-- built files will be auto injected -->
+  <script src='/static/js/rem.js' async></script>
+</body>
+
 </html>

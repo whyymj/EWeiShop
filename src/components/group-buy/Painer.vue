@@ -1,6 +1,6 @@
 <template>
     <div class='painer'>
-        <page-info theme='解决三大拼团活动通痛点' detail=''>
+        <page-info theme='解决三大拼团活动通痛点' detail=' '>
             <ul class='painer-list'>
                 <li class='painer-list__item' v-for='(item,index) in list' :key='index'>
                     <img v-lazy="item.img" :alt="item.detail">
@@ -43,6 +43,7 @@
         margin:30px 0 70px;
         .painer-list {
             display: flex;
+            margin-top:60px;
             justify-content: center;
             >.painer-list__item {
                 width: 211px;

@@ -3,11 +3,11 @@
         <swipe :autoplay="3000" style='height:100%;' indicator-color="white" @change="onChange">
             <swipe-item class='vip-manage-easier__swipe-item'>
                 <page-info theme='会员管理更便捷' :detail-style='detailLeftAlign' detail='会员信息一目了然，会员消费标签支持自动生成定制专属会员营销方案'></page-info>
-                <img class='vip-manage-easier__img' v-lazy='"/static/image/new-retail/img_4.png"' alt="">
+                <img class='vip-manage-easier__img' v-lazy='"/static/image/new-retail/img_4.png"' alt="会员信息一目了然，会员消费标签支持自动生成定制专属会员营销方案">
             </swipe-item>
             <swipe-item class='vip-manage-easier__swipe-item'>
-                <page-info theme='会员管理更便捷' :detail-style='detailLeftAlign' detail='会员信息一目了然，会员消费标签支持自动生成定制专属会员营销方案'></page-info>
-                <img class='vip-manage-easier__img' v-lazy='"/static/image/new-retail/img_4.png"' alt="">
+                <page-info theme='商城管理更省心' :detail-style='detailLeftAlign' detail='门店与线上商城数据互通，时刻掌握商品库存SKU,轻松运营管理'></page-info>
+                <img class='vip-manage-easier__img' v-lazy='"/static/image/new-retail/img_5.png"' alt="门店与线上商城数据互通，时刻掌握商品库存SKU">
             </swipe-item>
             <div class="custom-indicator" slot="indicator">
                 <span class="point point1" :class='{"active-point":current==0}'></span>
@@ -28,7 +28,8 @@
             return {
                 current: 0,
                 detailLeftAlign: {
-                    textAlign: 'left'
+                    textAlign: 'left',
+                    marginTop:'18px'
                 }
             }
         },
@@ -59,7 +60,7 @@
         .vip-manage-easier__img {
             width: 470px;
             display: block;
-            margin: 70px auto 0;
+            margin: 50px auto 0;
             overflow: hidden;
         }
         .custom-indicator {

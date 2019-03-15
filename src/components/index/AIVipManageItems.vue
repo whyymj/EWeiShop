@@ -40,7 +40,7 @@
         margin:0 auto 72px;
         >.ai-vip-items__item {
             box-sizing: border-box;
-            border-right: 1px solid #ddd;
+            border-right: 1px solid #ddd;/*no*/
             width: 33.4%;
             height: 72px;
             &:last-child {

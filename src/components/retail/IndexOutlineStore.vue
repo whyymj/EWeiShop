@@ -1,7 +1,7 @@
 <template>
     <ul class='img-list'>
         <li v-for='(item,index) in imgList' class='img-list__item' :key='index'>
-            <img v-lazy="item.img" class='img-list__item__img' alt="">
+            <img v-lazy="item.img" class='img-list__item__img' :alt="item.title">
             <span class='img-list__item__title' v-html='item.title'></span>
             <span class='img-list__item__content' v-html='item.content'></span>
         </li>
@@ -64,13 +64,15 @@
             >.img-list__item__content {
                 color: #fff;
                 position: absolute;
-                top: 201px;
+                top: 198px;
                 left: 0;
                 right: 0;
                 margin: auto;
-                width: 177px;
+                width: 100%;
                 text-align: center;
-                line-height: 35px;
+                line-height: 38px;
+                font-size: 24px;
+                transform: scale(.9);
             }
         }
     }

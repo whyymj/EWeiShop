@@ -39,7 +39,7 @@
         position: relative;
         overflow: hidden;
         >h2 {
-            margin: 80px auto 30px;
+            margin: 80px auto 14px;
             text-align: center;
             font-size: 34px;
             font-weight: 600;

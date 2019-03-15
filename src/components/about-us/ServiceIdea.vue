@@ -1,7 +1,7 @@
 <template>
     <div class='service-idea'>
         <page-info theme='服务理念' detail=''></page-info>
-        <img class='service-idea__title-bg' v-lazy="'../../assets/image/about_us/title-bg.png'" alt="">
+        <img class='service-idea__title-bg' src="../../assets/image/about_us/title-bg.png" alt="服务理念">
         <ul class='service-idea__list'>
             <li class='service-idea__list__item' v-for='(item,index) in list' :key='index'>
                 <img v-lazy="item.img" :alt="item.detail">

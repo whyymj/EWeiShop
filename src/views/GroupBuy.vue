@@ -6,14 +6,16 @@
         <reflow></reflow>
         <!-- 社交分享传播，提升商城影响力 -->
         <share></share>
-        <!-- 唤醒沉睡会员促活商城 -->
-        <wake></wake>
-        <!-- 拼团页面展示 -->
-        <show></show>
-        <!-- EWEISHOP拼团的特色 -->
-        <character></character>
-        <!-- 解决三大拼团活动通痛点 -->
-        <painer></painer>
+        <lazy-component>
+            <!-- 唤醒沉睡会员促活商城 -->
+            <wake></wake>
+            <!-- 拼团页面展示 -->
+            <show></show>
+            <!-- EWEISHOP拼团的特色 -->
+            <character></character>
+            <!-- 解决三大拼团活动通痛点 -->
+            <painer></painer>
+        </lazy-component>
     </div>
 </template>
 
@@ -26,6 +28,16 @@
     import character from '../components/group-buy/Character.vue'
     import painer from '../components/group-buy/Painer.vue'
     export default {
+        metaInfo: {
+            title: '产品中心_拼团_社交电商营销利器_降低库存回笼资金', // set a title
+            meta: [{ // set meta
+                name: 'keywords',
+                content: '新零售，社交电商，分销商城，EWEISHOP，微信商城，微信小程序，微信小程序商城，微信商城管理，三级分销，千人千面'
+            }, {
+                name: "description",
+                content: 'EWEISHOP新零售社交分销商城，一站式社交电商解决方案，多渠道营销，融合线上线下打造健康闭合的电商生态圈，新零售电商'
+            }]
+        },
         components: {
             pageBrief,
             reflow,

@@ -2,12 +2,12 @@
     <div class='contact-us'>
         <h2>青岛易联互动网络科技有限公司</h2>
         <p class='contact-us__addr'>
-            <img class='contact-us__addr__icon' v-lazy="'/static/image/about_us/position.png'" alt="地址">
+            <img class='contact-us__addr__icon' v-lazy="'/static/image/about_us/position.png'" alt="地址:青岛市市北区龙城路31号卓越世纪中心4号楼21F">
             <span class="contact-us__addr__label">地址：</span>
             <span class="contact-us__addr__adds">青岛市市北区龙城路31号卓越世纪中心4号楼21F</span>
         </p>
         <p class='contact-us__tel'>
-            <img class='contact-us__tel__icon' v-lazy="'/static/image/about_us/phone.png'" alt="电话">
+            <img class='contact-us__tel__icon' v-lazy="'/static/image/about_us/phone.png'" alt="电话：158-6554-6761、186-6026-3082、185-6137-9620">
             <span class="contact-us__tel__label">电话：</span>
             <span class="contact-us__tel__tels">
                                 <i>158-6554-6761</i>

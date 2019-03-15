@@ -9,13 +9,16 @@ import 'vant/lib/index.css';
 import {
   Lazyload
 } from 'vant';
-
+import VueLazyload from 'vue-lazyload'
 // options 为可选参数，无则不传
 Vue.use(Lazyload, {
   preLoad: 1.3,
   loading: '/static/image/loading.png',
   error: '/static/image/loading.png',
   attempt: 1
+});
+Vue.use(VueLazyload, {
+  lazyComponent: true
 });
 Vue.use(VueAwesomeSwiper, /* { default global options } */ )
 Vue.use(MetaInfo)

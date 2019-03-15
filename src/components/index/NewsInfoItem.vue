@@ -1,7 +1,7 @@
 <template>
     <ul class='news-info'>
-        <li class='news-info__item' v-for='(item,index) in newsList' :key='index'>
-            <img v-lazy="item.img" alt="">
+        <li class='news-info__item' v-for='(item,index) in newsList' :key='index' @click='toNewsDetail'>
+            <img v-lazy="item.img" :alt="item.title">
             <h3>{{item.title}}</h3>
             <p class="news-info__item__keywords">
                 <span class="news-info__item__keywords__word" v-for='(val,key) in item.keyWords' :key='key'>{{val}}</span>
@@ -23,6 +23,13 @@
                 }]
             }
         },
+        methods:{
+            toNewsDetail(){
+                this.$router.push({
+                    path:'/news-detail'
+                })
+            }
+        }
     }
 </script>
 
@@ -36,7 +43,7 @@
             margin: auto;
             box-sizing: border-box;
             height: 185px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #eee;/*no*/
             position: relative;
             >img {
                 position: absolute;
@@ -68,7 +75,7 @@
                     height: 36px;
                     border-radius: 18px;
                     background: #f6f6f8;
-                    font-size: 16px;
+                    font-size: 22px;
                     line-height: 40px;
                     text-align: center;
                     padding: 0 18px;

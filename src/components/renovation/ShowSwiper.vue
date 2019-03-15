@@ -1,11 +1,11 @@
 <template>
-    <div class='show-swiper-box'>
+    <div class='renovation--show-swiper-box'>
         <div class='show-swiper'>
             <swiper :options="swiperOption" ref="mySwiper">
                 <!-- slides -->
-                <swiper-slide><img v-lazy='"/static/image/renovation/template1.png"' alt=""></swiper-slide>
-                <swiper-slide><img v-lazy='"/static/image/renovation/template2.png"' alt=""></swiper-slide>
-                <swiper-slide><img v-lazy='"/static/image/renovation/template3.png"' alt=""></swiper-slide>
+                <swiper-slide><img v-lazy='"/static/image/renovation/template1.png"' alt="门店装修模板"></swiper-slide>
+                <swiper-slide><img v-lazy='"/static/image/renovation/template2.png"' alt="门店装修模板"></swiper-slide>
+                <swiper-slide><img v-lazy='"/static/image/renovation/template3.png"' alt="门店装修模板"></swiper-slide>
             </swiper>
         </div>
         <div class="show-swiper__pagination">
@@ -78,7 +78,7 @@
 </script>
 
 <style lang='scss'>
-    .show-swiper-box {
+    .renovation--show-swiper-box {
         overflow: hidden;
         width:100%;
         height:980px;
@@ -130,7 +130,7 @@
             }
         }
         >.show-swiper__pagination {
-            height: 6px;
+            height: 7px;
             bottom: 0;
             position: absolute;
             width: 100%;
@@ -145,7 +145,7 @@
                 border-radius: 6px;
             }
             >.show-swiper__pagination__item--active {
-                background: #f15f51;
+                background: #49daae;
             }
         }
     }

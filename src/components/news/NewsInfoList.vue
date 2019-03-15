@@ -1,7 +1,7 @@
 <template>
     <list class='news-info' v-model="loading" :finished="finished" finished-text="没有更多了" @load="onLoad">
         <div class='news-info__item' v-for='(item,index) in list' :key='index'>
-            <img v-lazy="item.img" alt="">
+            <img v-lazy="item.img" :alt="item.title">
             <h3>{{item.title}}</h3>
             <p class="news-info__item__keywords">
                 <span class="news-info__item__keywords__word" v-for='(val,key) in item.keyWords' :key='key'>{{val}}</span>
@@ -45,7 +45,7 @@
                     // 加载状态结束
                     this.loading = false;
                     // 数据全部加载完成
-                    if (this.list.length >= 5) {
+                    if (this.list.length >= 2) {
                         this.finished = true;
                     }
                 }, 1500);
@@ -64,7 +64,7 @@
             margin: auto;
             box-sizing: border-box;
             height: 185px;
-            border-bottom: 1px solid #eee;
+            border-bottom: 1px solid #eee;/*no*/
             position: relative;
             >img {
                 position: absolute;
@@ -96,7 +96,7 @@
                     height: 36px;
                     border-radius: 18px;
                     background: #f6f6f8;
-                    font-size: 16px;
+                    font-size: 22px;
                     line-height: 40px;
                     text-align: center;
                     padding: 0 18px;

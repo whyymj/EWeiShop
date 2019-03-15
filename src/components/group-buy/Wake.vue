@@ -16,7 +16,8 @@
             return {
                 detailStyle: {
                     textAlign: 'left',
-                    width:'81%'
+                    width:'81%',
+                      marginTop:'22px'
                 }
             }
         },

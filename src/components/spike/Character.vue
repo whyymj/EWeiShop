@@ -58,6 +58,8 @@
         .character-list-box {
             width: 100%;
             overflow-x: auto;
+            margin-top:60px;
+             -webkit-overflow-scrolling: touch;
             >.character-list-box__list {
                 display: flex;
                 justify-content: center;

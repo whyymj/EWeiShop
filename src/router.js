@@ -7,6 +7,10 @@ Vue.use(Router)
 export default new Router({
   mode: "history",
   routes: [{
+      path: '*',
+      redirect: '/',
+    },
+    {
       path: '/',
       name: 'Index',
       component: Index
@@ -47,7 +51,11 @@ export default new Router({
       path: '/renovation',
       name: 'Renovation',
       component: () => import('./views/Renovation.vue')
-    },{
+    }, {
+      path: '/service',
+      name: 'Service',
+      component: () => import('./views/Service.vue')
+    }, {
       path: '/social-contact',
       name: 'Renovation',
       component: () => import('./views/SocialContact.vue')

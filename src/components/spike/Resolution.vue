@@ -30,11 +30,11 @@
                     detail: '秒杀可刺激用户下单缓解库存压力'
                 }, {
                     img: '/static/image/spike/icon3.png',
-                    title: '吸粉难',
+                    title: '会员活跃度低',
                     detail: '秒杀快速吸引线上流量促活会员'
                 }, {
                     img: '/static/image/spike/icon4.png',
-                    title: '吸粉难',
+                    title: '交易成单低',
                     detail: '秒杀可带动其他商品成单提升营业额'
                 }, ]
             }

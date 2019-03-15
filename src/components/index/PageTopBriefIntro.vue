@@ -6,7 +6,7 @@
                     <h2>{{item.theme}}</h2>
                     <span>{{item.detail}}</span>
                 </div>
-                <img v-lazy="item.img" class='brief-bg__img' alt="">
+                <img v-lazy="item.img" class='brief-bg__img' :alt="item.detail">
             </swipe-item>
             <div class="custom-indicator" slot="indicator">
                 <span class="point point1" v-for="(item,index) in swipeList" :key='index' :class='{"active-point":index==current}'></span>
@@ -91,13 +91,12 @@
         .custom-indicator {
             position: absolute;
             bottom: 24px;
-            left: 50%;
-            overflow: hidden;
+            left: 50%; 
             transform: translate(-50%, 0);
             >.point {
                 box-sizing: border-box;
-                width: 8px;
-                height: 8px;
+                width: 4px;/*no*/
+                height: 4px;/*no*/
                 border-radius: 4px;
                 float: left;
                 margin-right: 6px;

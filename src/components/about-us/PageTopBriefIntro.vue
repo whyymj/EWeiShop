@@ -24,7 +24,7 @@
         >.brief-bg__word {
             position: absolute;
             width: 670px;
-            height: 413px;
+            height: 423px;
             left: 0;
             right: 0;
             margin: auto;
@@ -54,9 +54,9 @@
                 overflow: auto;
                 >span {
                     display: inline-block;
-                    font-size: 24px;
+                    font-size: 23px;
                     color: rgba(255, 255, 255, 0.8);
-                    line-height: 42px;
+                    line-height: 40px;
                     color: #7b88a2;
                     margin-bottom: 10px;
                 }

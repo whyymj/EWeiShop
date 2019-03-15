@@ -2,7 +2,7 @@
     <div class='brief-bg'>
         <div class='brief-bg__word'>
             <h2>社交电商解决方案</h2>
-            <span>帮助您建立去中心化的电商体系快速引爆线上流量</span>
+            <span>帮助您建立去中心化的电商体系<br/>快速引爆线上流量</span>
         </div>
         <img v-lazy='"/static/image/social_bussiness/banner-img.png"' class='brief-bg__img' alt="">
     </div>

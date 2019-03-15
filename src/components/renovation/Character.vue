@@ -1,6 +1,6 @@
 <template>
     <div class='character'>
-        <page-info theme='功能演示' detail=''>
+        <page-info theme='EWEISHOP 店铺装修的特色' detail=''>
             <ul class='character-list'>
                 <li class='character-list__item' v-for='(item,index) in list' :key='index'>
                     <img v-lazy="item.img" :alt="item.detail">
@@ -73,9 +73,10 @@
                     color:#3b426b;
                     line-height: 26px;
                     top:150px;
+                    font-weight: 600;
                 }
                 >span{
-                    font-size: 22px;
+                    font-size: 24px;
                     color:#7b88a2;
                     line-height: 39px;
                     top:192px;

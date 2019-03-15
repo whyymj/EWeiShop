@@ -1,42 +1,42 @@
 <template>
     <div class='navigator'>
-        <img v-lazy="'/static/image/global/nav_logo.png'" class='navigator__logo' alt="">
-        <img v-lazy="'/static/image/global/nav_btn.png'" class='navigator__btn' @click='showNav' alt="">
+        <img v-lazy="'/static/image/global/nav_logo.png'" class='navigator__logo' alt="logo">
+        <img v-lazy="'/static/image/global/nav_btn.png'" class='navigator__btn' @click='showNav' alt="close">
         <Popup position="right" v-model="show">
             <nav class='nav' @click='routeTo'>
                 <div class="nav__logo">
                     <img class='nav__logo__logo' v-lazy="logo" alt="eweishop logo">
-                    <img class='nav__logo__close' v-lazy="close" alt="close navigator">
+                    <img class='nav__logo__close' v-lazy="close" alt="close navigator" @click='show=false'>
                 </div>
-                <h2 class='nav__title' data-nav='/'>首页</h2>
+                <h2 class='nav__title' :class='{"curPage":curPage("/")}' data-nav='/'>首页</h2>
                 <collapse v-model="activeNames" @change='change'>
                     <collapse-item name="1">
-                        <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("1")>-1}' slot='right-icon' alt=""> <span class='sub-title' slot='title'>解决方案</span>
+                        <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("1")>-1}' slot='right-icon' alt="解决方案"> <span class='sub-title' slot='title'>解决方案</span>
                         <ul class='programs'>
-                            <li data-nav='/new-retail'>新零售解决方案</li>
-                            <li data-nav='/social-contact'>社交电商解决方案</li>
-                            <li data-nav='/distribution'>分销解决方案</li>
+                            <li data-nav='/new-retail' :class='{"curPage":curPage("/new-retail")}'>新零售解决方案</li>
+                            <li data-nav='/social-contact' :class='{"curPage":curPage("/social-contact")}'>社交电商解决方案</li>
+                            <li data-nav='/distribution' :class='{"curPage":curPage("/distribution")}'>分销解决方案</li>
                         </ul>
                     </collapse-item>
                     <collapse-item name="2">
-                        <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("2")>-1}' slot='right-icon' alt=""> <span class='sub-title' slot='title'>产品中心</span>
+                        <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("2")>-1}' slot='right-icon' alt="产品中心"> <span class='sub-title' slot='title'>产品中心</span>
                         <ul class='programs'>
-                            <li data-nav='/renovation'>店铺装修</li>
-                            <li data-nav='/group-buy'>拼团</li>
-                            <li data-nav='/spike'>秒杀</li>
+                            <li data-nav='/renovation' :class='{"curPage":curPage("/renovation")}'>店铺装修</li>
+                            <li data-nav='/group-buy' :class='{"curPage":curPage("/group-buy")}'>拼团</li>
+                            <li data-nav='/spike' :class='{"curPage":curPage("/spike")}'>秒杀</li>
                         </ul>
                     </collapse-item>
                     <collapse-item name="3">
-                        <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("3")>-1}' slot='right-icon' alt=""> <span class='sub-title' slot='title'>新闻中心</span>
+                        <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("3")>-1}' slot='right-icon' alt="新闻中心"> <span class='sub-title' slot='title'>新闻中心</span>
                         <ul class='programs'>
-                            <li data-nav='/'>产品发布</li>
-                            <li data-nav='/'>最新动态</li>
-                            <li data-nav='/'>更新日志</li>
+                            <li data-nav='/new-prod'>产品发布</li>
+                            <li data-nav='/new-info'>最新动态</li>
+                            <li data-nav='/new-log'>更新日志</li>
                         </ul>
                     </collapse-item>
                 </collapse>
-                <h2 class='nav__title nav__title--help' data-nav='/'>帮助中心</h2>
-                <h2 class='nav__title nav__title--about-us' data-nav='/aboutus'>关于我们</h2>
+                <h2 class='nav__title nav__title--help' data-nav='/service' :class='{"curPage":curPage("/service")}'>帮助中心</h2>
+                <h2 class='nav__title nav__title--about-us' data-nav='/aboutus' :class='{"curPage":curPage("/aboutus")}'>关于我们</h2>
             </nav>
         </Popup>
     </div>
@@ -63,10 +63,18 @@
                 logo: '/static/image/global/nav_logo.png',
                 close: '/static/image/global/x.png',
                 arrowDown: '/static/image/global/arrow-down.png',
-                activeNames: ['1']
+                activeNames: ['1', '2', '3']
+            }
+        },
+        watch: {
+            show() {
+                this.$emit('toggleFooter', !this.show)
             }
         },
         methods: {
+            curPage(path) {
+                return path == this.$route.path;
+            },
             showNav() {
                 this.show = !this.show;
             },
@@ -77,6 +85,7 @@
                 /**
                  * 路由跳转事件
                  */
+                this.show=false;
                 if (page.target.dataset && page.target.dataset.nav) {
                     let nav = page.target.dataset.nav;
                     if (nav != this.$route.path) {
@@ -94,7 +103,14 @@
     .navigator {
         width: 100%;
         height: 88px;
-        position: relative;
+        top:0;
+        position: absolute;
+        z-index:1000;
+        background: #fff;
+        border-bottom: 1px solid #eee;/*no*/
+        .curPage {
+            color: #fb6638!important;
+        }
         >.navigator__logo {
             width: 255px;
             height: 100%;
@@ -120,8 +136,7 @@
             >.nav__logo {
                 width: 100%;
                 box-sizing: border-box;
-                border-bottom: 1px solid #eee;
-                /*no*/
+                border-bottom: 1px solid #eee;/*no*/
                 height: 88px;
                 position: relative;
                 >img {
@@ -174,7 +189,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 box-sizing: border-box;
-                padding: 22px 0 0 20px;
+                padding: 22px 0 0 24px;
                 >li {
                     width: 220px;
                     font-size: 24px;

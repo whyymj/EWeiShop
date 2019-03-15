@@ -2,9 +2,9 @@
     <div class='brief-bg'>
         <div class='brief-bg__word'>
             <h2>新零售解决方案</h2>
-            <span>整合全渠道资源为您建立闭合的社交电商生态圈</span>
+            <span>打通线下和线上<br/>重构商城和消费者的联系</span>
         </div>
-        <img v-lazy='"/static/image/new-retail/banner_img.png"' class='brief-bg__img' alt="">
+        <img v-lazy='"/static/image/new-retail/banner_img.png"' class='brief-bg__img' alt="新零售解决方案_整合全渠道资源为您建立闭合的社交电商生态圈">
     </div>
 </template>
 
