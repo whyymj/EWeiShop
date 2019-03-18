@@ -4,7 +4,7 @@
       <router-view/>
       <!-- 懒加载footer -->
       <lazy-component>
-        <page-footer></page-footer>
+        <page-footer v-show='!hideFooter'></page-footer>
       </lazy-component>
     </div>
     <!-- 顶部导航 -->
@@ -28,11 +28,14 @@
     watch: {
       '$route' () {
         document.getElementById('app_container').scrollTop = 0;
+        let path = this.$route.path;
+        this.hideFooter = /^\/service.*/.test(path) || path.indexOf('/iframe/help') > -1;
       }
     },
     data() {
       return {
-        showFloatFooter: true
+        showFloatFooter: true,
+        hideFooter: false
       }
     },
     methods: {
@@ -49,6 +52,11 @@
       }
     },
     mounted() {
+      /**
+       * 关于我们以及跳转外连接时，隐藏footer
+       */
+      let path = this.$route.path;
+      this.hideFooter = /^\/service.*/.test(path) || path.indexOf('/iframe/help') > -1;
       setTimeout(() => {
         document.getElementById('firstShow').style = 'opacity:0';
         setTimeout(() => {
@@ -184,7 +192,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        background: rgba(0, 0, 0, 0.1);
+        background: rgba(0, 0, 0, 0.2);
         width: 10px;
         height: 10px;
         border-radius: 50%;

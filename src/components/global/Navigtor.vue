@@ -22,7 +22,7 @@
                         <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("2")>-1}' slot='right-icon' alt="产品中心"> <span class='sub-title' slot='title'>产品中心</span>
                         <ul class='programs'>
                             <li data-nav='/renovation' :class='{"curPage":curPage("/renovation")}'>店铺装修</li>
-                            <li data-nav='/group-buy' :class='{"curPage":curPage("/group-buy")}'>拼团</li>
+                            <li data-nav='/groupBuy' :class='{"curPage":curPage("/groupBuy")}'>拼团</li>
                             <li data-nav='/spike' :class='{"curPage":curPage("/spike")}'>秒杀</li>
                         </ul>
                     </collapse-item>
@@ -35,7 +35,7 @@
                         </ul>
                     </collapse-item> -->
                 </collapse>
-                <h2 class='nav__title nav__title--help'><a href="https://m.wiki.ewei.shop/help/">帮助中心</a></h2>
+                <h2 class='nav__title nav__title--help'><router-link data-nav='/iframe/help'  :class='{"curPage":curPage("/iframe/help")}' to='/iframe/help' tag='a'>帮助中心</router-link></h2>
                 <h2 class='nav__title nav__title--about-us' data-nav='/aboutus' :class='{"curPage":curPage("/aboutus")}'>关于我们</h2>
             </nav>
         </Popup>
@@ -168,6 +168,7 @@
                     width: 100%;
                     height: 100%;
                     color: #3b426b;
+                    text-decoration: none;
                 }
             }
             >.nav__title--help,

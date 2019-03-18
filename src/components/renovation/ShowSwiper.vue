@@ -1,9 +1,9 @@
 <template>
     <div class='renovation--show-swiper-box'>
-        <div class='show-swiper' >
+        <div class='show-swiper'>
             <swiper :options="swiperOption" ref="mySwiper">
                 <!-- slides -->
-                <swiper-slide v-for='item in imgList' :key='item.img'><img :src='item.img' :alt="item.alt" :style='{marginBottom:item.title?"32px":"10px"}'><span v-if='item.title'>{{item.title}}</span></swiper-slide>
+                <swiper-slide v-for='item in imgList' :key='item.img'><img :src='item.img' :alt="item.alt" :style='{marginBottom:item.title?"32px":"10px"}'><span :style='{transform:isIOS?"scale(0.7)":"scale(0.93)",bottom:isIOS?"-5px":"0"}'>{{item.title}}</span></swiper-slide>
             </swiper>
         </div>
         <div class="show-swiper__pagination">
@@ -29,19 +29,19 @@
                     return [{
                         img: '/static/image/renovation/template1.jpg',
                         alt: '门店装修模板',
-                        title:''
+                        title: ''
                     }, {
                         img: '/static/image/renovation/template2.jpg',
                         alt: '门店装修模板',
-                        title:''
+                        title: ''
                     }, {
                         img: '/static/image/renovation/template3.jpg',
                         alt: '门店装修模板',
-                        title:''
+                        title: ''
                     }, {
                         img: '/static/image/renovation/template4.jpg',
                         alt: '门店装修模板',
-                        title:''
+                        title: ''
                     }]
                 }
             },
@@ -56,9 +56,16 @@
             swiper,
             swiperSlide
         },
+        beforeMount() {
+            var u = navigator.userAgent,
+                app = navigator.appVersion;
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+            this.isIOS = !isAndroid;
+        },
         data() {
             let that = this;
             return {
+                isIOS: false,
                 active: 0,
                 swiperOption: {
                     slidesPerView: 3,
@@ -108,7 +115,7 @@
         overflow: hidden;
         width: 100%;
         .show-swiper {
-            width: 1612px;  
+            width: 1612px;
             margin: 30px 0 46px;
             position: relative;
             top: 0;
@@ -122,7 +129,7 @@
                         display: block;
                         width: 500px;
                         height: 890px;
-                        margin: 0 auto ;
+                        margin: 0 auto;
                         transition: all .5s;
                         opacity: 0.6;
                         border-radius: 10px;
@@ -138,7 +145,7 @@
                         font-size: 24px;
                         text-align: center;
                         line-height: 24px;
-                        color: #5d6494;
+                        color: #5d6494; // transform: scale(.7);
                     }
                 }
                 .swiper-slide-active {

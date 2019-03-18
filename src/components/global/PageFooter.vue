@@ -18,7 +18,7 @@
             </ul> -->
             <h3>服务支持</h3>
             <ul class='navigator__body__service'>
-                <li><a href="https://m.wiki.ewei.shop/help/">帮助中心</a></li>
+                <li><router-link to='/iframe/help' tag='a'>帮助中心</router-link></li>
                 <li data-nav='/aboutus'>关于我们</li>
                 <li><a href="https://m.we7shop.com/index.html">人人商城</a></li>
             </ul>

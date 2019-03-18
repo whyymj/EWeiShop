@@ -39,7 +39,7 @@ export default new Router({
       name: 'DistributionScheme',
       component: () => import('./views/DistributionScheme.vue')
     }, {
-      path: '/group-buy',
+      path: '/groupBuy',
       name: 'GroupBuy',
       component: () => import('./views/GroupBuy.vue')
     },
@@ -59,6 +59,10 @@ export default new Router({
       path: '/social-contact',
       name: 'Renovation',
       component: () => import('./views/SocialContact.vue')
+    }, {
+      path: '/iframe/:url',
+      name: 'Renovation',
+      component: () => import('./views/IFrameContainer.vue')
     }
   ]
 })
