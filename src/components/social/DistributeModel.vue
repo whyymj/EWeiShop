@@ -1,6 +1,6 @@
 <template>
     <div class='distribute-model'>
-        <page-info theme='基于社交圈低成本裂变营销' detail='多触点推广，全网裂变式传播的营销体系' :detail-style='detailStyle'></page-info>
+        <page-info theme='社交电商多样化业务场景' detail='您的一站式电商营销解决方案' :detail-style='detailStyle'></page-info>
         <ul class='distribute-model__list'>
             <li class='distribute-model__list__item' v-for='(item,index) in list' :key='index'>
                 <img v-lazy="item.img" :alt="item.detail">
@@ -20,7 +20,7 @@
         data() {
             return {
                 detailStyle: {
-                    color: '#5d6494'
+                    color: '#9c9eae'
                 },
                 list: [{
                     img: '/static/image/social_bussiness/icon-1.png',

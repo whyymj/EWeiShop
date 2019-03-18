@@ -3,9 +3,9 @@
         <div class='show-swiper'>
             <swiper :options="swiperOption" ref="mySwiper">
                 <!-- slides -->
-                <swiper-slide><img v-lazy='"/static/image/distribution_scheme/group1.png"' alt=""><span>秒杀商品详情</span></swiper-slide>
-                <swiper-slide><img v-lazy='"/static/image/distribution_scheme/group2.png"' alt=""><span>秒杀支付成功</span></swiper-slide>
-                <swiper-slide><img v-lazy='"/static/image/distribution_scheme/group3.png"' alt=""><span>秒杀商品列表</span></swiper-slide>
+                <swiper-slide><img v-lazy='"/static/image/distribution_scheme/group1.jpg"' alt=""><span>秒杀商品详情</span></swiper-slide>
+                <swiper-slide><img v-lazy='"/static/image/distribution_scheme/group2.jpg"' alt=""><span>秒杀支付成功</span></swiper-slide>
+                <swiper-slide><img v-lazy='"/static/image/distribution_scheme/group3.jpg"' alt=""><span>秒杀商品列表</span></swiper-slide>
             </swiper>
         </div>
         <div class="show-swiper__pagination">
@@ -23,6 +23,7 @@
         swiper,
         swiperSlide
     } from 'vue-awesome-swiper'
+import { close } from 'fs';
     export default {
         components: {
             Button,
@@ -57,7 +58,8 @@
                     on: {
                         slideChangeTransitionStart: function() {
                             that.active = this.activeIndex;
-                            that.$emit('activeIndex', this.activeIndex)
+                            that.$emit('activeIndex', this.activeIndex);
+                           
                         },
                     },
                     // some swiper options...
@@ -95,8 +97,7 @@
                         transform: scale(0.71);
                         transition: all .5s;
                         opacity: 0.6;
-                        border-radius: 5px;
-                        // box-shadow: 2px 10px 30px -2px #eee;
+                        border-radius: 5px; // box-shadow: 2px 10px 30px -2px #eee;
                     }
                     span {
                         position: absolute;

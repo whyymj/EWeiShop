@@ -21,15 +21,15 @@
         data() {
             return {
                 list: [{
-                    img: '/static/image/renovation/character1.png',
+                    img: '/static/image/renovation/character1.jpg',
                     title: '易拖拽操作',
                     detail: '首次接触电商<br/>即可快速掌握技巧'
                 }, {
-                    img: '/static/image/renovation/character2.png',
+                    img: '/static/image/renovation/character2.jpg',
                     title: '装修效率倍增',
                     detail: '装修页面一键应用<br/>全渠道统一样式'
                 }, {
-                    img: '/static/image/renovation/character3.png',
+                    img: '/static/image/renovation/character3.jpg',
                     title: '个性化装修',
                     detail: '组件自由拖拽满足<br/>商城个性化需求'
                 }]
@@ -47,8 +47,9 @@
             display: flex;
             justify-content: center;
             box-shadow: #e5e4e4 0 0 16px 50%;
-            margin:60px 0 70px;
+            margin: 60px 0 70px;
             >.character-list__item {
+                box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
                 width: 211px;
                 height: 292px;
                 background: #fff;
@@ -58,9 +59,12 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 >img {
-                    width: 100%;
+                    width: 78px;
                     margin-top: 36px;
-                    height:77px;
+                    height: 77px;
+                }
+                &:nth-child(2)>img {
+                    width: 95px;
                 }
                 >h4,
                 >span {
@@ -68,18 +72,18 @@
                     width: 100%;
                     text-align: center;
                 }
-                >h4{
-                    font-size: 26px ;
-                    color:#3b426b;
+                >h4 {
+                    font-size: 26px;
+                    color: #3b426b;
                     line-height: 26px;
-                    top:150px;
+                    top: 150px;
                     font-weight: 600;
                 }
-                >span{
+                >span {
                     font-size: 24px;
-                    color:#7b88a2;
+                    color: #7b88a2;
                     line-height: 39px;
-                    top:192px;
+                    top: 192px;
                     transform: scale(.9);
                 }
             }

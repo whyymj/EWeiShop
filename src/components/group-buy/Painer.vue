@@ -20,13 +20,13 @@
         data() {
             return {
                 list: [{
-                    img: '/static/image/assemble/pain1.png',
+                    img: '/static/image/assemble/pain1.jpg',
                     detail: '推广传播难'
                 }, {
-                    img: '/static/image/assemble/pain2.png',
+                    img: '/static/image/assemble/pain2.jpg',
                     detail: '宣传成本高'
                 }, {
-                    img: '/static/image/assemble/pain3.png',
+                    img: '/static/image/assemble/pain3.jpg',
                     detail: '订单转化少'
                 }]
             }

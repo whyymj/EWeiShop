@@ -1,6 +1,6 @@
 <template>
     <div class='brief-bg'>
-        <img class='brief-bg__img' v-lazy="'/static/image/about_us/banner350.png'" alt="青岛易联互动网络科技有限公司" >
+        <img class='brief-bg__img' v-lazy="'/static/image/about_us/banner350.jpg'" alt="青岛易联互动网络科技有限公司">
         <div class="brief-bg__word">
             <h2>青岛易联互动网络科技有限公司</h2>
             <p>
@@ -31,8 +31,8 @@
             bottom: 0;
             background: #fff;
             overflow: hidden;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
             >h2 {
                 position: absolute;
                 font-weight: 500;

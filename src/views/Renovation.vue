@@ -3,7 +3,7 @@
         <!-- 产品中心-店铺装修 -->
         <page-brief></page-brief>
         <!-- 功能演示 -->
-        <function-show></function-show>
+        <!-- <function-show></function-show> -->
         <!-- EWEISHOP店铺装修的特色 -->
         <character></character>
         <!-- 优秀设计师装修模板覆盖全行业 -->

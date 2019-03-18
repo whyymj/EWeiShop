@@ -10,7 +10,7 @@
         <!-- 智能会员管理     -->
         <div class="AI-vip-management">
             <page-info theme='智能会员管理' detail='让您更了解会员的消费习惯'>
-                <img class="AI-vip-management__bg-img" v-lazy='"/static/image/index/vip-pic.png"' alt="智能会员管理">
+                <img class="AI-vip-management__bg-img" v-lazy='"/static/image/index/vip-pic.jpg"' alt="智能会员管理">
                 <ai-vip-items></ai-vip-items>
             </page-info>
         </div>
@@ -21,7 +21,7 @@
             <!-- 一站式电商服务 -->
             <one-stop-service></one-stop-service>
             <!-- 新闻资讯 -->
-            <news-info></news-info>
+            <!-- <news-info></news-info> -->
         </lazy-component>
     </div>
 </template>

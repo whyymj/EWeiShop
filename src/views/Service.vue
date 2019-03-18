@@ -1,21 +1,21 @@
 <template>
     <div class='service'>
         <div class="service__box">
-            <h6 class="service__box__item service__box__name">商务代表：王宣宣</h6>
-            <p class="service__box__item service__box__qq"><img src="../assets/image/customer/icon-qq.png" alt="QQ：102354254"><span>102354254</span></p>
+            <h6 class="service__box__item service__box__name">客户经理：{{curServer.name}}</h6>
+            <p class="service__box__item service__box__qq"><img src="../assets/image/customer/icon-qq.png" alt="QQ：102354254"><a id='QQ' :href='curServer.qqHref'>{{curServer.qq}}</a></p>
             <span class="service__box__item service__box__wx">微信咨询</span>
-            <img class="service__box__item service__box__qr" v-lazy="'/static/image/customer/Qr.png'" alt="微信二维码">
+            <img class="service__box__item service__box__qr" :src="curServer.wxQR" alt="微信二维码">
             <span class="service__box__item service__box__tel">服务热线</span>
-            <span class="service__box__item service__box__num">158-6554-6761</span>
+            <span class="service__box__item service__box__num">{{curServer.tel}}</span>
         </div>
         <span class="service__info">青岛易联互动网络科技有限公司版权所有<br/>©2016-2018鲁ICP备18044507号</span>
-        <img class='service__bg' v-lazy="'/static/image/index/fangan2.png'" alt="QQ：102354254">
+        <img class='service__bg' v-lazy="'/static/image/index/fangan2.png'" :alt="'QQ：'+curServer.qq">
     </div>
 </template>
 
 <script>
     export default {
-         metaInfo: {
+        metaInfo: {
             title: '产品中心_秒杀_快速聚焦促进订单达成', // set a title
             meta: [{ // set meta
                 name: 'keywords',
@@ -25,6 +25,50 @@
                 content: 'EWEISHOP新零售社交分销商城，一站式社交电商解决方案，多渠道营销，融合线上线下打造健康闭合的电商生态圈，新零售电商'
             }]
         },
+        data() {
+            return {
+                serverList: [{
+                    name: '王琦',
+                    qq: '3004648558',
+                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=3004648558&site=qq&menu=yes",
+                    wxQR: '/static/image/customer/codeqi.png',
+                    tel: '186-6177-2381'
+                }, {
+                    name: '王萱萱',
+                    qq: '3003387764',
+                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=3003387764&site=qq&menu=yes",
+                    wxQR: '/static/image/customer/codexuan.jpg',
+                    tel: '158-6554-6761'
+                }, {
+                    name: '潇潇',
+                    qq: '3001610941',
+                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=3001610941&site=qq&menu=yes",
+                    wxQR: '/static/image/customer/codexiao.jpg',
+                    tel: '176-8578-1337'
+                }, {
+                    name: '环环',
+                    qq: '3001677311',
+                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=3001677311&site=qq&menu=yes",
+                    wxQR: '/static/image/customer/codehuan.jpg',
+                    tel: '186-6173-1192'
+                }],
+                curServer: {
+                    name: '王琦',
+                    qq: '3004648558',
+                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=3004648558&site=qq&menu=yes",
+                    wxQR: '/static/image/customer/codeqi.png',
+                    tel: '186-6177-2381'
+                }
+            }
+        },
+        methods: {
+            random() {
+                return Math.floor(Math.random() * 4);
+            }
+        },
+        beforeMount() {
+            this.curServer = this.serverList[this.random()]
+        }
     }
 </script>
 
@@ -76,7 +120,8 @@
                     height: 30px;
                     margin: 33px 18px 0 0;
                 }
-                >span {
+                >a {
+                    text-decoration: none;
                     font-size: 28px;
                     line-height: 30px;
                     color: #333;
@@ -139,8 +184,8 @@
         }
         &:before {
             top: -350px;
-            left:-250px;
-            width:600px;
+            left: -250px;
+            width: 600px;
             border-radius: 50%;
             background: #fb6638;
             content: '';

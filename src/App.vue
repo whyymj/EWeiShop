@@ -10,10 +10,10 @@
     <!-- 顶部导航 -->
     <navigtor @toggleFooter='toggleFloatFooter'></navigtor>
     <!-- 底部联系我们免费试用 -->
-    <div class="navigator__adv">
+    <router-link tag='div' class="navigator__adv" to='/service'>
       <img v-lazy="'/static/image/index/phone_.png'" class='navigator__adv__phone' alt="联系我们 免费试用">
       <span class='navigator__adv__callus'>联系我们 &nbsp; 免费试用</span>
-    </div>
+    </router-link>
   </div>
 </template>
 
@@ -137,7 +137,8 @@
       margin: auto;
       height: 132px;
       box-sizing: border-box;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);/*no*/
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      /*no*/
       padding: 36px 0 0 0;
       >span {
         display: block;

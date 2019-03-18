@@ -10,23 +10,23 @@
                 <li data-nav='/social-contact'>社交电商解决方案</li>
                 <li data-nav='/distribution'>分销解决方案</li>
             </ul>
-            <h3>新闻中心</h3>
+            <!-- <h3>新闻中心</h3>
             <ul class='navigator__body__news-center'>
                 <li data-nav='/new-prod'>产品发布</li>
                 <li data-nav='/new-info'>最新动态</li>
                 <li data-nav='/new-log'>更新日志</li>
-            </ul>
+            </ul> -->
             <h3>服务支持</h3>
-            <ul class='navigator__body__servicen'>
-                <li data-nav='/service'>帮助中心</li>
+            <ul class='navigator__body__service'>
+                <li><a href="https://m.wiki.ewei.shop/help/">帮助中心</a></li>
                 <li data-nav='/aboutus'>关于我们</li>
-                <li @click='toRRSC'>人人商城</li>
+                <li><a href="https://m.we7shop.com/index.html">人人商城</a></li>
             </ul>
         </div>
         <div class="navigator__statement">
             <span>青岛易联互动网络科技有限公司版权所有</span>
             <span>©2016-2018鲁ICP备18044507号</span>
-        </div> 
+        </div>
     </footer>
 </template>
 
@@ -35,9 +35,6 @@
         methods: {
             curPage(path) {
                 return path == this.$route.path;
-            },
-            toRRSC() {
-                window.location.href = 'https://m.we7shop.com/index.html'
             },
             routeTo(page) {
                 /**
@@ -70,7 +67,8 @@
         }
     }
     .navigator {
-        height: 680px;
+        height: 580px;
+        // height: 680px;
         width: 100%;
         overflow: hidden;
         background: #1c1c24;
@@ -108,6 +106,15 @@
                     font-size: 24px;
                     color: #888;
                     line-height: 24px;
+                    >a {
+                        display: inline-block;
+                        width: 100%;
+                        height: 100%;
+                        color: #3b426b;
+                        font-size: 24px;
+                        color: #888;
+                        line-height: 24px;
+                    }
                 }
                 >li:last-child {
                     margin: 0 0 0 0;
@@ -119,7 +126,8 @@
             margin: auto;
             height: 132px;
             box-sizing: border-box;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);/*no*/ 
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            /*no*/
             padding: 36px 0 0 0;
             >span {
                 display: block;

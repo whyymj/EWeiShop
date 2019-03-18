@@ -13,9 +13,10 @@
                     </ul>
                     <p class='join-us__list__item__other'>
                         <span v-for="(val,key) in item.others" :key="key">
-                                                            {{ val }}
-                                                        </span>
+                                                                {{ val }}
+                                                            </span>
                     </p>
+                    <img class='join-us__list__item__bg' v-lazy="'/static/image/about_us/join-bg-img.png'" alt="加入我们">
                 </li>
             </ul>
         </div>
@@ -66,7 +67,8 @@
             box-shadow: 0 0 0 0 rgba(251, 102, 56, .5);
         }
         100% {
-            box-shadow: 0 0 0 3px rgba(251, 102, 56, .5);/*no*/
+            box-shadow: 0 0 0 3px rgba(251, 102, 56, .5);
+            /*no*/
         }
     }
     .join-us {
@@ -81,10 +83,9 @@
         >.join-us__box {
             width: 100%;
             overflow: auto;
-             -webkit-overflow-scrolling: touch;
+            -webkit-overflow-scrolling: touch;
             >.join-us__list {
-                width: fit-content; 
-                // overflow: hidden;
+                width: fit-content; // overflow: hidden;
                 box-sizing: border-box;
                 display: flex;
                 justify-content: flex-start;
@@ -96,7 +97,7 @@
                     border-radius: 10px;
                     position: relative;
                     margin: 50px 12px 70px;
-                    box-shadow: rgba(115, 186, 192, .2) 0 5px 32px;
+                    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
                     box-sizing: border-box;
                     &:before {
                         position: absolute;
@@ -132,8 +133,10 @@
                             &:after {
                                 content: '';
                                 position: absolute;
-                                width: 6px;/*no*/
-                                height: 6px;/*no*/
+                                width: 6px;
+                                /*no*/
+                                height: 6px;
+                                /*no*/
                                 border-radius: 50%;
                                 top: 14px;
                                 left: -32px;
@@ -157,6 +160,13 @@
                             line-height: 46px;
                             margin: 0 0 20px -40px;
                         }
+                    }
+                    >.join-us__list__item__bg{
+                        width:164px;
+                        position: absolute;
+                        bottom:30px;
+                        right:40px;
+                        z-index:2001;
                     }
                 }
             }

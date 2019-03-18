@@ -1,6 +1,6 @@
 <template>
     <div class='character'>
-        <img class='character__bg' v-lazy="'/static/image/distribution_scheme/daili_background.png'" alt="">
+        <img class='character__bg' v-lazy="'/static/image/distribution_scheme/daili_background.jpg'" alt="">
         <page-info theme='EWEISHOP分销的特色' :theme-style='detailStyle' detail='轻松带领成千上万粉丝为您销售商品' :detail-style='detailStyle'>
             <ul class='character__list'>
                 <li class='character__list__item' v-for='(item,index) in list' :key='index'>
@@ -24,19 +24,19 @@
                     color: '#fff'
                 },
                 list: [{
-                    img: '/static/image/distribution_scheme/character-1.png',
+                    img: '/static/image/distribution_scheme/character-1.jpg',
                     detail: '快速拓客吸粉<br/>轻松卖货无压力'
                 }, {
-                    img: '/static/image/distribution_scheme/character-2.png',
+                    img: '/static/image/distribution_scheme/character-2.jpg',
                     detail: '疯狂社交传播<br/>交易倍增提升影响'
                 }, {
-                    img: '/static/image/distribution_scheme/character-3.png',
+                    img: '/static/image/distribution_scheme/character-3.jpg',
                     detail: '分销商拥挤机制提高推广积极性'
                 }, {
-                    img: '/static/image/distribution_scheme/character-4.png',
+                    img: '/static/image/distribution_scheme/character-4.jpg',
                     detail: '投入成本少<br/>宣传力度广'
                 }, {
-                    img: '/static/image/distribution_scheme/character-5.png',
+                    img: '/static/image/distribution_scheme/character-5.jpg',
                     detail: '建立庞大销售网络快速销货'
                 }]
             }

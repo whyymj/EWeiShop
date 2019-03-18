@@ -8,7 +8,7 @@
         <easy-reach></easy-reach>
         <lazy-component>
             <!-- 秒杀页面展示 -->
-            <show></show>
+            <show :img-list='imgList' :pagination-color='paginationColor' theme='秒杀页面展示'></show>
             <!--EWEISHOP 秒杀的特色 -->
             <character></character>
         </lazy-component>
@@ -19,7 +19,7 @@
     import pageBrief from '../components/spike/PageTopBriefIntro'
     import resolution from '../components/spike/Resolution.vue'
     import easyReach from '../components/spike/EasyReach.vue'
-    import show from '../components/spike/Show.vue'
+    import show from '../components/renovation/Show.vue'
     import character from '../components/spike/Character.vue'
     export default {
         metaInfo: {
@@ -38,6 +38,24 @@
             easyReach,
             show,
             character
+        },
+        data() {
+            return {
+                imgList: [{
+                    img: '/static/image/spike/group1.jpg',
+                    alt: '秒杀商品详情',
+                    title:'秒杀商品详情'
+                }, {
+                    img: '/static/image/spike/group2.jpg',
+                    alt: '秒杀装修组件',
+                    title:'秒杀装修组件'
+                }, {
+                    img: '/static/image/spike/group3.jpg',
+                    alt: '倒计时模块',
+                    title:'倒计时模块'
+                }],
+                paginationColor: '#f15f51'
+            }
         },
     }
 </script>

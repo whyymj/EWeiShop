@@ -1,6 +1,6 @@
 <template>
     <div class='character'>
-        <img class='character__bg' v-lazy='"/static/image/spike/character-bg.png"' alt="">
+        <img class='character__bg' v-lazy='"/static/image/spike/character-bg.jpg"' alt="">
         <page-info theme='EWEISHOP 秒杀的特色' :theme-style='themeStyle' detail=''>
             <div class='character-list-box'>
                 <ul class='character-list-box__list'>

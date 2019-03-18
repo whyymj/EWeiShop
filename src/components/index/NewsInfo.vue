@@ -18,7 +18,7 @@
         methods: {
             toNews() {
                 this.$router.push({
-                    path: '/news'
+                    path: '/news/all'
                 })
             }
         }

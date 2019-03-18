@@ -1,6 +1,6 @@
 <template>
     <div class='data-visible'>
-        <img class='data-visible__bg-img' v-lazy="'/static/image/index/data_bg_img.png'" alt="数据可视化展示,一目了然有利于您科学统计分析运筹帷幄">
+        <img class='data-visible__bg-img' v-lazy="'/static/image/index/data_bg_img.jpg'" alt="数据可视化展示,一目了然有利于您科学统计分析运筹帷幄">
         <page-info theme='数据可视化展示' detail='一目了然有利于您科学统计分析运筹帷幄' :theme-style='themeWhiteStyle' :detail-style='detailWhiteStyle'>
             <div class='slider-container'>
                 <ul class='items-slider'>
@@ -30,15 +30,15 @@
                     color: "#fff"
                 },
                 itemList: [{
-                    img: '/static/image/index/data-1.png',
+                    img: '/static/image/index/data-1.jpg',
                     title: '交易数据',
                     content: '快速掌握商城用户的交易周期，为您提供一手商城交易数据支持'
                 }, {
-                    img: '/static/image/index/data-2.png',
+                    img: '/static/image/index/data-2.jpg',
                     title: '商品数据',
                     content: '智能商品数据监控，自动统计商品数据，为您提供精准可靠、有效的销售数据'
                 }, {
-                    img: '/static/image/index/data-3.png',
+                    img: '/static/image/index/data-3.jpg',
                     title: '会员数据',
                     content: '帮助您快速掌握商场用户的交易周期，深入洞察分析，为您提供一手商城交易数据支持'
                 }, ]

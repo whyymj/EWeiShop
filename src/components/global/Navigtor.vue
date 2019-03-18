@@ -26,16 +26,16 @@
                             <li data-nav='/spike' :class='{"curPage":curPage("/spike")}'>秒杀</li>
                         </ul>
                     </collapse-item>
-                    <collapse-item name="3">
+                    <!-- <collapse-item name="3">
                         <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("3")>-1}' slot='right-icon' alt="新闻中心"> <span class='sub-title' slot='title'>新闻中心</span>
                         <ul class='programs'>
-                            <li data-nav='/new-prod'>产品发布</li>
-                            <li data-nav='/new-info'>最新动态</li>
-                            <li data-nav='/new-log'>更新日志</li>
+                            <li data-nav='/news/prod'>产品发布</li>
+                            <li data-nav='/news/info'>最新动态</li>
+                            <li data-nav='/news/log'>更新日志</li>
                         </ul>
-                    </collapse-item>
+                    </collapse-item> -->
                 </collapse>
-                <h2 class='nav__title nav__title--help' data-nav='/service' :class='{"curPage":curPage("/service")}'>帮助中心</h2>
+                <h2 class='nav__title nav__title--help'><a href="https://m.wiki.ewei.shop/help/">帮助中心</a></h2>
                 <h2 class='nav__title nav__title--about-us' data-nav='/aboutus' :class='{"curPage":curPage("/aboutus")}'>关于我们</h2>
             </nav>
         </Popup>
@@ -85,8 +85,8 @@
                 /**
                  * 路由跳转事件
                  */
-                this.show=false;
                 if (page.target.dataset && page.target.dataset.nav) {
+                    this.show = false;
                     let nav = page.target.dataset.nav;
                     if (nav != this.$route.path) {
                         this.$router.push({
@@ -103,11 +103,12 @@
     .navigator {
         width: 100%;
         height: 88px;
-        top:0;
+        top: 0;
         position: absolute;
-        z-index:1000;
+        z-index: 2000;
         background: #fff;
-        border-bottom: 1px solid #eee;/*no*/
+        border-bottom: 1px solid #eee;
+        /*no*/
         .curPage {
             color: #fb6638!important;
         }
@@ -162,6 +163,12 @@
                 padding: 0 0 0 36px;
                 color: #3b426b;
                 font-weight: 600;
+                >a {
+                    display: inline-block;
+                    width: 100%;
+                    height: 100%;
+                    color: #3b426b;
+                }
             }
             >.nav__title--help,
             >.nav__title--about-us {

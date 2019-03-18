@@ -10,7 +10,7 @@
             <!-- 唤醒沉睡会员促活商城 -->
             <wake></wake>
             <!-- 拼团页面展示 -->
-            <show></show>
+            <show :bg-color='bgColor' :img-list='imgList' :pagination-color='paginationColor' theme='拼团页面展示'></show>
             <!-- EWEISHOP拼团的特色 -->
             <character></character>
             <!-- 解决三大拼团活动通痛点 -->
@@ -24,7 +24,7 @@
     import reflow from '../components/group-buy/Reflow.vue'
     import share from '../components/group-buy/Share.vue'
     import wake from '../components/group-buy/Wake.vue'
-    import show from '../components/group-buy/Show.vue'
+    import show from '../components/renovation/Show.vue'
     import character from '../components/group-buy/Character.vue'
     import painer from '../components/group-buy/Painer.vue'
     export default {
@@ -46,7 +46,26 @@
             show,
             character,
             painer
-        }
+        },
+        data() {
+            return {
+                bgColor: '#fafafa',
+                imgList: [{
+                    img: '/static/image/assemble/group1.jpg',
+                    alt: '拼团商品详情',
+                    title: '拼团支付成功',
+                }, {
+                    img: '/static/image/assemble/group2.jpg',
+                    alt: '拼团支付成功',
+                    title: '拼团商品列表',
+                }, {
+                    img: '/static/image/assemble/group3.jpg',
+                    alt: '拼团商品列表',
+                    title: '拼团商品详情',
+                }],
+                paginationColor: '#f15f51'
+            }
+        },
     }
 </script>
 

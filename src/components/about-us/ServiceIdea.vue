@@ -23,16 +23,16 @@
                     color: '#5d6494'
                 },
                 list: [{
-                    img: '/static/image/about_us/idea-bg-1.png',
+                    img: '/static/image/about_us/idea-bg-1.jpg',
                     detail: '客户至上，规范管理<br/>为客户创造价值'
                 }, {
-                    img: '/static/image/about_us/idea-bg-2.png',
+                    img: '/static/image/about_us/idea-bg-2.jpg',
                     detail: '热情专业高效负责<br/>用心为每一位客户服务'
                 }, {
-                    img: '/static/image/about_us/idea-bg-3.png',
+                    img: '/static/image/about_us/idea-bg-3.jpg',
                     detail: '全心全意服务<br/>为客户排忧解难'
                 }, {
-                    img: '/static/image/about_us/idea-bg-4.png',
+                    img: '/static/image/about_us/idea-bg-4.jpg',
                     detail: '一切为了客户<br/>为客户提供更便捷的服务'
                 }]
             }
