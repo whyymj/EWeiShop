@@ -19,30 +19,27 @@
         data() {
             return {
                 list: [{
-                    img: '/static/image/distribution_scheme/exmp1.png',
+                    img: '/static/image/distribution_scheme/exmp1.jpg',
                     alt: '花点时间'
                 }, 
-                // {
-                //     img: '/static/image/distribution_scheme/exmp2.png',
-                //     alt: '每日优鲜'
-                // }, {
-                //     img: '/static/image/distribution_scheme/exmp3.png',
-                //     alt: '淑女屋'
-                // }, 
                 {
-                    img: '/static/image/distribution_scheme/exmp4.png',
+                    img: '/static/image/distribution_scheme/exmp2.jpg',
+                    alt: '每日优鲜'
+                }, {
+                    img: '/static/image/distribution_scheme/exmp3.jpg',
+                    alt: '淑女屋'
+                }, 
+                {
+                    img: '/static/image/distribution_scheme/exmp4.jpg',
                     alt: '蒙牛'
                 }, {
-                    img: '/static/image/distribution_scheme/exmp5.png',
+                    img: '/static/image/distribution_scheme/exmp5.jpg',
                     alt: '中粮'
                 }, {
-                    img: '/static/image/distribution_scheme/exmp6.png',
-                    alt: '哇哈哈'
-                }, {
-                    img: '/static/image/distribution_scheme/exmp7.png',
+                    img: '/static/image/distribution_scheme/exmp7.jpg',
                     alt: '老板'
                 }, {
-                    img: '/static/image/distribution_scheme/exmp8.png',
+                    img: '/static/image/distribution_scheme/exmp8.jpg',
                     alt: '切糕王子'
                 }, ]
             }
