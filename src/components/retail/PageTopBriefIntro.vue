@@ -1,10 +1,10 @@
 <template>
     <div class='brief-bg'>
         <div class='brief-bg__word'>
-            <h2>新零售解决方案</h2>
-            <span>打通线下和线上<br/>重构商城和消费者的联系</span>
+            <h2 class='fadeInUp'>新零售解决方案</h2>
+            <span class='fadeInUp'>打通线下和线上<br/>重构商城和消费者的联系</span>
         </div>
-        <img v-lazy='"/static/image/new-retail/banner_img.png"' class='brief-bg__img' alt="新零售解决方案_整合全渠道资源为您建立闭合的社交电商生态圈">
+        <img v-lazy='"/static/image/new-retail/banner_img.png"' class='brief-bg__img fadeInUp' alt="新零售解决方案_整合全渠道资源为您建立闭合的社交电商生态圈">
     </div>
 </template>
 
@@ -28,7 +28,8 @@
         width: 100%;
         height: 350px;
         position: relative;
-        background: linear-gradient(45deg,#008aff, #1790ff);
+        background: linear-gradient(45deg, #008aff, #1790ff);
+        overflow: hidden;
         >.brief-bg__word {
             position: absolute;
             width: 340px;

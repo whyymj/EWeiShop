@@ -1,10 +1,10 @@
 <template>
     <div class='brief-bg'>
         <div class='brief-bg__word'>
-            <h2>产品中心-秒杀</h2>
-            <span>营销必备力气，吸引新粉丝促活老用户，有效提升转化率</span>
+            <h2 class='fadeInUp'>产品中心-秒杀</h2>
+            <span class='fadeInUp'>营销必备力气，吸引新粉丝促活老用户，有效提升转化率</span>
         </div>
-        <img v-lazy='"/static/image/spike/banner-img.png"' class='brief-bg__img' alt="">
+        <img v-lazy='"/static/image/spike/banner-img.png"' class='brief-bg__img fadeInUp' alt="">
     </div>
 </template>
 
@@ -28,6 +28,7 @@
         width: 100%;
         height: 350px;
         position: relative;
+        overflow: hidden;
         background: linear-gradient(-90deg,#ff5470, #ff5b5b);
         >.brief-bg__word {
             position: absolute;

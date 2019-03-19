@@ -1,10 +1,10 @@
 <template>
     <div class='brief-bg'>
         <div class='brief-bg__word'>
-            <h2>分销解决方案</h2>
-            <span>帮助您建立去中心化的电商体系快速引爆线上流量</span>
+            <h2 class='fadeInUp'>分销解决方案</h2>
+            <span class='fadeInUp'>帮助您建立去中心化的电商体系快速引爆线上流量</span>
         </div>
-        <img v-lazy="'/static/image/distribution_scheme/banner_img.png'" class='brief-bg__img' alt="整合全渠道资源为您建立闭合的社交电商生态圈">
+        <img v-lazy="'/static/image/distribution_scheme/banner_img.png'" class='brief-bg__img fadeInUp' alt="整合全渠道资源为您建立闭合的社交电商生态圈">
     </div>
 </template>
 
@@ -29,6 +29,7 @@
         height: 350px;
         position: relative;
         background: #5060e6;
+        overflow: hidden;
         >.brief-bg__word {
             position: absolute;
             width: 340px;

@@ -23,7 +23,7 @@
                 }, {
                     img: '/static/image/new-retail/icon3.png',
                     title: '促活商城',
-                    content: '丰富营销玩法促活促进订单达成'
+                    content: '丰富营销玩法<br/>促活促进订单达成'
                 }]
             }
         },

@@ -36,7 +36,7 @@
                     detail: '分时段秒杀活动<br/>便捷高效'
                 }, {
                     img: '/static/image/spike/character4.png',
-                    detail: '秒杀数据全<br/>便于制定营销方案'
+                    detail: '秒杀数据全掌握<br/>便于制定营销方案'
                 }, ]
             }
         },

@@ -32,6 +32,7 @@
         methods: {
             onChange(index) { 
                 this.current = index;
+                this.$emit('swipe',index)
             }
         },
         components: { 

@@ -1,8 +1,8 @@
 <template>
     <div class='page-info'>
-        <h2 :style='themeStyle'>{{theme}}</h2>
-        <h3 :style='detailStyle'>{{detail}}</h3>
-        <slot></slot>
+        <h2 class='fadeInUp' :style='themeStyle'>{{theme}}</h2>
+        <h3 class='fadeInUp2' :style='detailStyle'>{{detail}}</h3>
+        <slot ></slot>
     </div>
 </template>
 
@@ -15,8 +15,8 @@
             },
             themeStyle: {
                 type: Object,
-                default(){
-                    return{}
+                default () {
+                    return {}
                 }
             },
             detail: {
@@ -25,10 +25,13 @@
             },
             detailStyle: {
                 type: Object,
-                default(){
-                    return{}
+                default () {
+                    return {}
                 }
             }
+        },
+        beforeMount(){
+
         }
     }
 </script>

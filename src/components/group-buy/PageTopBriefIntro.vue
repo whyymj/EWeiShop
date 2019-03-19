@@ -1,10 +1,10 @@
 <template>
     <div class='brief-bg'>
         <div class='brief-bg__word'>
-            <h2>产品中心-拼团</h2>
-            <span>社交电商时代营销利器，快速扩张，帮您降低库存回笼资金</span>
+            <h2 class='fadeInUp'>产品中心-拼团</h2>
+            <span class='fadeInUp'>社交电商时代营销利器，快速扩张，帮您降低库存回笼资金</span>
         </div>
-        <img v-lazy="'/static/image/assemble/banner_img.png'" class='brief-bg__img' alt="产品中心-拼团_社交电商时代营销利器，快速扩张，帮您降低库存回笼资金">
+        <img v-lazy="'/static/image/assemble/banner_img.png'" class='brief-bg__img fadeInUp' alt="产品中心-拼团_社交电商时代营销利器，快速扩张，帮您降低库存回笼资金">
     </div>
 </template>
 
@@ -28,7 +28,8 @@
         width: 100%;
         height: 350px;
         position: relative;
-        background: linear-gradient(90deg,#ff5870, #ff8b54);
+        overflow: hidden;
+        background: linear-gradient(90deg, #ff5870, #ff8b54);
         >.brief-bg__word {
             position: absolute;
             width: 340px;

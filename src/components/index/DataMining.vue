@@ -24,12 +24,12 @@
                     {
                         img: '/static/image/index/fangan2.png',
                         theme: '社交电商解决方案',
-                        detail: "整合多渠道资源，无缝对接<br/>线上商城与线下门店",
+                        detail: "采取用户裂变模式，建立电商矩阵社群挖掘潜在用户",
                         url: '/social-contact'
                     }, {
                         img: '/static/image/index/fangan3.png',
                         theme: '分销解决方案',
-                        detail: "整合多渠道资源，无缝对接<br/>线上商城与线下门店",
+                        detail: "建立完善的分销推广体系，打造超人气分销商城",
                         url: '/distribution'
                     }
                 ]

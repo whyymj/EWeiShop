@@ -24,19 +24,19 @@
                     color: '#fff'
                 },
                 list: [{
-                    img: '/static/image/distribution_scheme/character-1.jpg',
+                    img: '/static/image/distribution_scheme/character-1.png',
                     detail: '快速拓客吸粉<br/>轻松卖货无压力'
                 }, {
-                    img: '/static/image/distribution_scheme/character-2.jpg',
+                    img: '/static/image/distribution_scheme/character-2.png',
                     detail: '疯狂社交传播<br/>交易倍增提升影响'
                 }, {
-                    img: '/static/image/distribution_scheme/character-3.jpg',
+                    img: '/static/image/distribution_scheme/character-3.png',
                     detail: '分销商拥挤机制提高推广积极性'
                 }, {
-                    img: '/static/image/distribution_scheme/character-4.jpg',
+                    img: '/static/image/distribution_scheme/character-4.png',
                     detail: '投入成本少<br/>宣传力度广'
                 }, {
-                    img: '/static/image/distribution_scheme/character-5.jpg',
+                    img: '/static/image/distribution_scheme/character-5.png',
                     detail: '建立庞大销售网络快速销货'
                 }]
             }
@@ -67,7 +67,7 @@
                 margin: 0 18px 8px 0;
                 width: 211px;
                 height: 255px;
-                background: #fff;
+                background: rgba(255,255,255,.8);
                 position: relative;
                 border-radius: 5px;
                 >.character__list__item__icon {
@@ -90,6 +90,7 @@
                     right: 0;
                     margin: auto;
                     transform: scale(0.9);
+                    color:#5d6494;
                 }
             }
         }

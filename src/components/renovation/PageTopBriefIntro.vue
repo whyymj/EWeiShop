@@ -1,10 +1,10 @@
 <template>
     <div class='brief-bg'>
         <div class='brief-bg__word'>
-            <h2>产品中心-店铺装修</h2>
-            <span>店铺装修像搭积木一样简单，即刻拥有设计师般专业的商城页面</span>
+            <h2 class='fadeInUp'>产品中心-店铺装修</h2>
+            <span class='fadeInUp'>店铺装修像搭积木一样简单，即刻拥有设计师般专业的商城页面</span>
         </div>
-        <img v-lazy="'/static/image/renovation/decoration-ban.png'" class='brief-bg__img' alt="产品中心-店铺装修_店铺装修像搭积木一样简单，即刻拥有设计师般专业的商城页面">
+        <img v-lazy="'/static/image/renovation/decoration-ban.png'" class='brief-bg__img fadeInUp' alt="产品中心-店铺装修_店铺装修像搭积木一样简单，即刻拥有设计师般专业的商城页面">
     </div>
 </template>
 
@@ -29,6 +29,7 @@
         height: 350px;
         position: relative;
         background: #49daae;
+        overflow: hidden;
         >.brief-bg__word {
             position: absolute;
             width: 360px;

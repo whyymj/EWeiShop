@@ -27,6 +27,7 @@
     },
     watch: {
       '$route' () {
+        document.getElementById('firstShow').style = 'display:block';
         document.getElementById('app_container').scrollTop = 0;
         let path = this.$route.path;
         this.hideFooter = /^\/service.*/.test(path) || path.indexOf('/iframe/help') > -1;
@@ -43,10 +44,14 @@
         this.showFloatFooter = bool;
       }
     },
+    updated() {
+      setTimeout(() => {
+        document.getElementById('firstShow').style = 'display:none';
+      }, 0);
+    },
     beforeCreate() {
       function preventScroll() {
         requestAnimationFrame(() => {
-          console.log('eeee')
           preventScroll()
         })
       }
@@ -55,14 +60,11 @@
       /**
        * 关于我们以及跳转外连接时，隐藏footer
        */
+      setTimeout(() => {
+        document.getElementById('firstShow').style = 'display:none';
+      }, 0);
       let path = this.$route.path;
       this.hideFooter = /^\/service.*/.test(path) || path.indexOf('/iframe/help') > -1;
-      setTimeout(() => {
-        document.getElementById('firstShow').style = 'opacity:0';
-        setTimeout(() => {
-          document.getElementById('firstShow').style = 'display:none';
-        }, 500)
-      }, 0);
     }
   }
 </script>
@@ -72,12 +74,17 @@
     0% {
       width: 0;
       height: 0;
-      opacity: 1;
+      opacity: 0;
+    }
+    5% {
+      width: 10px;
+      height: 10px;
+      opacity: .2;
     }
     100% {
       width: 600px;
       height: 600px;
-      opacity: 0.2;
+      opacity: 0;
     }
   }
   #app {
@@ -185,6 +192,7 @@
         color: #fff;
       }
       &:after {
+        opacity: 0.2;
         content: '';
         position: absolute;
         top: 0;
@@ -192,7 +200,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        background: rgba(0, 0, 0, 0.2);
+        background: rgba(0, 0, 0,1);
         width: 10px;
         height: 10px;
         border-radius: 50%;

@@ -2,8 +2,8 @@
     <div class='brief-bg'>
         <img class='brief-bg__img' v-lazy="'/static/image/about_us/banner350.jpg'" alt="青岛易联互动网络科技有限公司">
         <div class="brief-bg__word">
-            <h2>青岛易联互动网络科技有限公司</h2>
-            <p>
+            <h2 class='fadeInUp'>青岛易联互动网络科技有限公司</h2>
+            <p class='fadeInUp'>
                 <span>青岛易联互动网络科技有限公司成立于2015年，公司位于CBD核心商业区,产品研发实力雄厚。</span>
                 <span>我们重视每一个产品、每一项服务、每一位客户，无论何时我们都以工匠精神打磨产品。公司经过3年多移动电商领域发展，已为超过6万服务商用户提供电商服务，累计创造收益超过亿元。</span>
             </p>
