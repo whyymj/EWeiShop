@@ -93,7 +93,7 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    position: fixed;
+    position: absolute;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
