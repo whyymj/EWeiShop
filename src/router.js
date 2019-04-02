@@ -63,6 +63,10 @@ export default new Router({
       path: '/iframe/:url',
       name: 'Renovation',
       component: () => import('./views/IFrameContainer.vue')
+    },{
+      path: '/customerService',
+      name: 'customerService',
+      component: () => import('./views/customerService.vue')
     }
   ]
 })
