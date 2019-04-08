@@ -24,6 +24,8 @@
                             <li data-nav='/renovation' :class='{"curPage":curPage("/renovation")}'>店铺装修</li>
                             <li data-nav='/groupBuy' :class='{"curPage":curPage("/groupBuy")}'>拼团</li>
                             <li data-nav='/spike' :class='{"curPage":curPage("/spike")}'>秒杀</li>
+                            <li data-nav='/customerService' :class='{"curPage":curPage("/customerService")}'>在线客服系统</li>
+                            <li data-nav='/cardScreat' :class='{"curPage":curPage("/cardScreat")}'>电子卡密</li>
                         </ul>
                     </collapse-item>
                     <!-- <collapse-item name="3">

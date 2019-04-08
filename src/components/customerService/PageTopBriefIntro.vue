@@ -1,10 +1,11 @@
 <template>
     <div class='brief-bg'>
+        <img class='brief__bgImg' v-lazy="'/static/image/customerService/banner-bg.png'" alt="">
         <div class='brief-bg__word'>
-            <h2 class='fadeInUp'>产品中心-店铺装修</h2>
-            <span class='fadeInUp'>店铺装修像搭积木一样简单，即刻拥有设计师般专业的商城页面</span>
+            <p class='fadeInUp'>在线客服系统</p>
+            <span class='fadeInUp'>加强商家与用户之间的沟通，是网络营销最重要的工具</span>
         </div>
-        <img v-lazy="'/static/image/renovation/decoration-ban.png'" class='brief-bg__img fadeInUp' alt="产品中心-店铺装修_店铺装修像搭积木一样简单，即刻拥有设计师般专业的商城页面">
+        <img v-lazy="'/static/image/customerService/banner-img.png'" class='brief-bg__img fadeInUp' alt="">
     </div>
 </template>
 
@@ -28,32 +29,37 @@
         width: 100%;
         height: 350px;
         position: relative;
-        background: #49daae;
         overflow: hidden;
+        >.brief__bgImg{
+            width: 100%;
+        }
         >.brief-bg__word {
             position: absolute;
-            width: 360px;
+            width: 49%;
             left: 40px;
-            top: 112px;
+            top: 50%;
             color: #fff;
+            margin-top: -83px;
+            padding-top: 10px;
             overflow: hidden;
-            >h2 {
+            >p {
                 font-weight: 600;
-                font-size: 36px;
+                font-size: 1.125rem;
                 color: #fff;
-                margin-bottom: 40px;
+                margin-bottom: 1.25rem;
             }
             >span {
-                font-size: 24px;
+                font-size:24px;
                 color: rgba(255, 255, 255, 0.8);
-                line-height: 42px;
+                line-height: 1.3125rem;
             }
         }
         >.brief-bg__img {
-            width: 258px;
+            width: 246px;
             position: absolute;
-            top: 41px;
-            right: 40px;
+            top: 50%;
+            right: 45px;
+            margin-top: -124px;
         }
     }
 </style>

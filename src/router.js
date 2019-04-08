@@ -63,6 +63,19 @@ export default new Router({
       path: '/iframe/:url',
       name: 'Renovation',
       component: () => import('./views/IFrameContainer.vue')
+    },{
+      path: '/customerService',
+      name: 'CustomerService',
+      component: () => import('./views/CustomerService.vue')
+    },{
+      path: '/custormServiceActive',
+      name: 'CustormServiceActive',
+      component: () => import('./views/CustormServiceActive.vue')
+    },
+    {
+      path: '/cardScreat',
+      name: 'CardScreat',
+      component: () => import('./views/CardScreat.vue')
     }
   ]
 })

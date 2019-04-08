@@ -3,6 +3,7 @@
         <swipe :autoplay="3000" style='height:100%;' indicator-color="white" @change="onChange">
             <swipe-item class='vip-manage-easier__swipe-item' v-for="(item,index) in swipeList" :key='index'>
                 <div v-if="item.theme!==''">
+                    <img class='brief__bgImg' v-lazy="'/static/image/customerService/banner-bg.png'" alt="">
                     <div class='brief-bg__word'>
                         <h2>{{item.theme}}</h2>
                         <span>{{item.detail}}</span>
@@ -40,18 +41,10 @@
                     textAlign: 'left'
                 },
                 swipeList: [{
-                    img: '/static/image/index/banner_img.png',
-                    theme: '新零售社交分销商城',
-                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
+                    img: '/static/image/customerService/banner-img.png',
+                    theme: '在线客服系统',
+                    detail: '加强商家与客户之间的沟通,是网络营销最重要的工具'
                 }, {
-                    img: '/static/image/index/banner_img.png',
-                    theme: '新零售社交分销商城',
-                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
-                }, {
-                    img: '/static/image/index/banner_img.png',
-                    theme: '新零售社交分销商城',
-                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
-                },{
                     img: '',
                     theme: '',
                     detail: ''
@@ -75,6 +68,9 @@
         height: 350px;
         position: relative;
         background: linear-gradient(45deg, #ff654c, #fb6638);
+        .brief__bgImg{
+            width: 100%;
+        }
         .brief-bg__word {
             position: absolute;
             width: 340px;
@@ -95,7 +91,7 @@
             }
         }
         .brief-bg__img {
-            width: 305px;
+            width: 255px;
             position: absolute;
             top: 50px;
             right: 32px;
