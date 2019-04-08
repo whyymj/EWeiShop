@@ -42,6 +42,7 @@
                 top: 60px;
                 text-align: center;
                 width: 100%;
+                 line-height: 36px;
             }
             >p {
                 position: absolute;

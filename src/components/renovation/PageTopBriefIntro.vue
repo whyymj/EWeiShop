@@ -38,6 +38,7 @@
             color: #fff;
             overflow: hidden;
             >h2 {
+                 line-height: 36px;
                 font-weight: 600;
                 font-size: 36px;
                 color: #fff;

@@ -85,6 +85,7 @@
             >h2 {
                 font-weight: 600;
                 font-size: 36px;
+                line-height: 36px;
                 color: #fff;
                 margin-bottom: 40px;
             }

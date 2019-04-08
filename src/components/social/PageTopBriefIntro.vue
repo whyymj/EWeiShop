@@ -40,6 +40,7 @@
                 font-weight: 600;
                 font-size: 36px;
                 color: #fff;
+                 line-height: 36px;
                 margin-bottom: 40px;
             }
             >span {

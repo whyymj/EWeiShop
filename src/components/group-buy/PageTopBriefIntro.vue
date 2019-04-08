@@ -42,6 +42,7 @@
                 font-size: 36px;
                 color: #fff;
                 margin-bottom: 40px;
+                line-height: 36px;
             }
             >span {
                 font-size: 24px;
