@@ -76,6 +76,11 @@ export default new Router({
       path: '/cardScreat',
       name: 'CardScreat',
       component: () => import('./views/CardScreat.vue')
+    },
+    {
+      path: '/actions',
+      name: 'Actions',
+      component: () => import('./views/Actions.vue')
     }
   ]
 })
