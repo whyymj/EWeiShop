@@ -24,7 +24,7 @@
       return flag;
     }
     
-    if (IsPC()) {//如果是PC端则跳转到PC端官网
+    if (IsPC()&& window.location.href.indexOf('m.ewei.shop') > -1) {//如果是PC端则跳转到PC端官网
       window.location.replace('http://ewei.shop/')
     }
   </script>
