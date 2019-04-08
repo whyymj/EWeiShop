@@ -36,7 +36,7 @@
             left: 40px;
             top: 112px;
             color: #fff;
-            overflow: hidden;
+            // overflow: hidden;
             >h2 {
                  line-height: 36px;
                 font-weight: 600;

@@ -36,7 +36,7 @@
             left: 40px;
             top: 90px;
             color: #fff;
-            overflow: hidden;
+            // overflow: hidden;
             >h2 {
                 font-weight: 500;
                 font-size: 36px;

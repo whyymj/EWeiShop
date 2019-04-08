@@ -30,7 +30,7 @@
         document.getElementById('firstShow').style = 'display:block';
         document.getElementById('app_container').scrollTop = 0;
         let path = this.$route.path;
-        this.hideFooter = /^\/service.*/.test(path) || path.indexOf('/iframe/help') > -1;
+        this.hideFooter = /^\/service.*/.test(path) || /^\/actions.*/.test(path) ||path.indexOf('/iframe/help') > -1;
       }
     },
     data() {

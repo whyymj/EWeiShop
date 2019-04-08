@@ -2,15 +2,15 @@
     <div class='brief-bg'>
         <swipe :autoplay="3000" style='height:100%;' indicator-color="white" @change="onChange">
             <swipe-item class='vip-manage-easier__swipe-item' v-for="(item,index) in swipeList" :key='index'>
-                <div v-if="item.theme!==''">
+                <div style='height:100%;width:100%;' v-if="item.theme!==''">
                     <div class='brief-bg__word'>
                         <h2>{{item.theme}}</h2>
                         <span>{{item.detail}}</span>
                     </div>
                     <img v-lazy="item.img" class='brief-bg__img' :alt="item.detail"> 
                 </div>
-                <div v-else>
-                    <img v-lazy="'/static/image/index/banner350.png'" alt="" style="max-width:100%;" @click="goServiceActive()">
+                <div style='height:100%;width:100%;' v-else>
+                    <img v-lazy="item.img" alt="" style="width:100%;height:100%;" @click="goServiceActive(item.link)">
                 </div>
             </swipe-item>
             <div class="custom-indicator" slot="indicator">
@@ -40,21 +40,19 @@
                     textAlign: 'left'
                 },
                 swipeList: [{
-                    img: '/static/image/index/banner_img.png',
-                    theme: '新零售社交分销商城',
-                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
-                }, {
-                    img: '/static/image/index/banner_img.png',
-                    theme: '新零售社交分销商城',
-                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
-                }, {
-                    img: '/static/image/index/banner_img.png',
-                    theme: '新零售社交分销商城',
-                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
-                },{
-                    img: '',
+                    img: '/static/image/index/banner-wap.jpg',
                     theme: '',
-                    detail: ''
+                    detail: '',
+                    link:'/actions'
+                }, {
+                    img: '/static/image/index/banner_img.png',
+                    theme: '新零售社交分销商城',
+                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
+                }, {
+                    img: '/static/image/index/banner350.png',
+                    theme: '',
+                    detail: '',
+                    link:'/custormServiceActive'
                 }]
             }
         },
@@ -62,8 +60,8 @@
             onChange(index) {
                 this.current = index;
             },
-            goServiceActive(){
-                this.$router.push({path:'/custormServiceActive'})
+            goServiceActive(url){
+                this.$router.push({path:url})
             }
         }
     }
@@ -81,7 +79,7 @@
             left: 40px;
             top: 112px;
             color: #fff;
-            overflow: hidden;
+            // overflow: hidden;
             >h2 {
                 font-weight: 600;
                 font-size: 36px;

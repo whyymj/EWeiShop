@@ -41,7 +41,7 @@
             color: #fff;
             margin-top: -83px;
             padding-top: 10px;
-            overflow: hidden;
+            // overflow: hidden;
             >p {
                 font-weight: 600;
                 font-size: 1.125rem;
