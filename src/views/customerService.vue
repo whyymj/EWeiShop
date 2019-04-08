@@ -41,7 +41,7 @@
 
 <script>    
   import itemHeader from '../components/customerService/itemHeader'
-  import pageBrief from '../components/customerService/PageTopBriefIntro'
+  import pageBrief from '../components/customerService/tobar.vue'
   import itemOne from '../components/customerService/itemOne'
   import itemTwo from '../components/customerService/itemTwo'
   import itemThree from '../components/customerService/itemThree'
