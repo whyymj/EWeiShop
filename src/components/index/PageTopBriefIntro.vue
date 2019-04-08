@@ -40,14 +40,14 @@
                     textAlign: 'left'
                 },
                 swipeList: [{
+                    img: '/static/image/index/banner_img.png',
+                    theme: '新零售社交分销商城',
+                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
+                }, {
                     img: '/static/image/index/banner-wap.jpg',
                     theme: '',
                     detail: '',
                     link:'/actions'
-                }, {
-                    img: '/static/image/index/banner_img.png',
-                    theme: '新零售社交分销商城',
-                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
                 }, {
                     img: '/static/image/index/banner350.png',
                     theme: '',

@@ -40,6 +40,7 @@
                 /**
                  * 路由跳转事件
                  */
+                document.getElementById('firstShow').style = 'display:block';
                 if (page.target.dataset && page.target.dataset.nav) {
                     let nav = page.target.dataset.nav;
                     if (nav != this.$route.path) {

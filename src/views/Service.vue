@@ -1,15 +1,16 @@
 <template>
     <div class='service'>
+        <img class='service__bg' v-lazy="'/static/image/index/fangan2.png'" :alt="'QQ：'+curServer.qq">
         <div class="service__box">
             <h6 class="service__box__item service__box__name">客户经理：{{curServer.name}}</h6>
             <p class="service__box__item service__box__qq"><img src="../assets/image/customer/icon-qq.png" alt="QQ：102354254"><a id='QQ' :href='curServer.qqHref'>{{curServer.qq}}</a></p>
             <span class="service__box__item service__box__wx">微信咨询</span>
             <img class="service__box__item service__box__qr" :src="curServer.wxQR" alt="微信二维码">
             <span class="service__box__item service__box__tel">服务热线</span>
-            <span class="service__box__item service__box__num">{{curServer.tel}}</span>
+            <a class="service__box__item service__box__num" :href='"tel:"+curServer.tel'>{{curServer.tel}}</a>
         </div>
         <span class="service__info">青岛易联互动网络科技有限公司版权所有<br/>©2016-2018鲁ICP备18044507号</span>
-        <img class='service__bg' v-lazy="'/static/image/index/fangan2.png'" :alt="'QQ：'+curServer.qq">
+        
     </div>
 </template>
 
@@ -158,6 +159,7 @@
                 font-size: 28px;
                 color: #fb6638;
                 bottom: 106px;
+                z-index: 1001;
             }
         }
         >.service__info {
@@ -178,7 +180,6 @@
             height: 550px;
             opacity: 0.04;
             bottom: -250px;
-            ;
             right: -110px;
             z-index: 1000;
         }

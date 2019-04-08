@@ -19,17 +19,6 @@
     components: {
          itemHeader
     },
-
-    computed: {},
-
-    beforeMount() {},
-
-    mounted() {},
-
-    methods: {},
-
-    watch: {}
-
   }
 
 </script>
@@ -37,6 +26,7 @@
 .itemOne{
     padding-top: 80px;
     padding-bottom: 46px;
+    min-height: 600px;
     .itemImg{
         margin-top: 48px;
         max-width: 100%;

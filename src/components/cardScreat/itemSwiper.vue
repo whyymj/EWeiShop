@@ -55,6 +55,7 @@
     // background-color: #f5f8ff;
     padding-top: 80px;
     // margin-bottom: 80px;
+    min-height: 800px;
    .headerTitle{
      padding-bottom:50px;
         p {

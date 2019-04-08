@@ -70,6 +70,7 @@
     .itemOne{
       background-color: #f5f8ff;
       padding-top: 80px;
+      min-height: 600px;
       .headerTitle{
         p {
             margin-top: 15px;
