@@ -7,7 +7,7 @@
                         <h2>{{item.theme}}</h2>
                         <span>{{item.detail}}</span>
                     </div>
-                    <img v-lazy="item.img" class='brief-bg__img' :alt="item.detail"> 
+                    <img v-lazy="item.img" class='brief-bg__img' :alt="item.detail">
                 </div>
                 <div style='height:100%;width:100%;' v-else>
                     <img v-lazy="item.img" alt="" style="width:100%;height:100%;" @click="goServiceActive(item.link)">
@@ -40,19 +40,19 @@
                     textAlign: 'left'
                 },
                 swipeList: [{
-                    img: '/static/image/index/banner_img.png',
-                    theme: '新零售社交分销商城',
-                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
-                }, {
                     img: '/static/image/index/banner-wap.jpg',
                     theme: '',
                     detail: '',
-                    link:'/actions'
+                    link: '/actions'
                 }, {
                     img: '/static/image/index/banner350.png',
                     theme: '',
                     detail: '',
-                    link:'/custormServiceActive'
+                    link: '/custormServiceActive'
+                }, {
+                    img: '/static/image/index/banner_img.png',
+                    theme: '新零售社交分销商城',
+                    detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
                 }]
             }
         },
@@ -60,8 +60,10 @@
             onChange(index) {
                 this.current = index;
             },
-            goServiceActive(url){
-                this.$router.push({path:url})
+            goServiceActive(url) {
+                this.$router.push({
+                    path: url
+                })
             }
         }
     }
@@ -78,8 +80,7 @@
             width: 340px;
             left: 40px;
             top: 112px;
-            color: #fff;
-            // overflow: hidden;
+            color: #fff; // overflow: hidden;
             >h2 {
                 font-weight: 600;
                 font-size: 36px;
@@ -102,12 +103,14 @@
         .custom-indicator {
             position: absolute;
             bottom: 24px;
-            left: 50%; 
+            left: 50%;
             transform: translate(-50%, 0);
             >.point {
                 box-sizing: border-box;
-                width: 4px;/*no*/
-                height: 4px;/*no*/
+                width: 4px;
+                /*no*/
+                height: 4px;
+                /*no*/
                 border-radius: 4px;
                 float: left;
                 margin-right: 6px;

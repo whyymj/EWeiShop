@@ -8,10 +8,10 @@
                         <h2>{{item.theme}}</h2>
                         <span>{{item.detail}}</span>
                     </div>
-                    <img v-lazy="item.img" class='brief-bg__img' :alt="item.detail"> 
+                    <img v-lazy="item.img" class='brief-bg__img' :alt="item.detail">
                 </div>
                 <div v-else>
-                    <img v-lazy="'/static/image/index/banner350.png'" alt="" style="max-width:100%;" @click="goServiceActive()">
+                    <img v-lazy="item.img" alt="" style="max-width:100%;" @click="goServiceActive()">
                 </div>
             </swipe-item>
             <div class="custom-indicator" slot="indicator">
@@ -41,13 +41,13 @@
                     textAlign: 'left'
                 },
                 swipeList: [{
+                    img: '/static/image/index/banner350.png',
+                    theme: '',
+                    detail: ''
+                }, {
                     img: '/static/image/customerService/banner-img.png',
                     theme: '在线客服系统',
                     detail: '加强商家与客户之间的沟通,是网络营销最重要的工具'
-                }, {
-                    img: '',
-                    theme: '',
-                    detail: ''
                 }]
             }
         },
@@ -55,8 +55,10 @@
             onChange(index) {
                 this.current = index;
             },
-            goServiceActive(){
-                this.$router.push({path:'/custormServiceActive'})
+            goServiceActive() {
+                this.$router.push({
+                    path: '/custormServiceActive'
+                })
             }
         }
     }
@@ -68,7 +70,7 @@
         height: 350px;
         position: relative;
         background: linear-gradient(45deg, #ff654c, #fb6638);
-        .brief__bgImg{
+        .brief__bgImg {
             width: 100%;
         }
         .brief-bg__word {
@@ -99,12 +101,14 @@
         .custom-indicator {
             position: absolute;
             bottom: 24px;
-            left: 50%; 
+            left: 50%;
             transform: translate(-50%, 0);
             >.point {
                 box-sizing: border-box;
-                width: 4px;/*no*/
-                height: 4px;/*no*/
+                width: 4px;
+                /*no*/
+                height: 4px;
+                /*no*/
                 border-radius: 4px;
                 float: left;
                 margin-right: 6px;
