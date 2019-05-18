@@ -25,6 +25,7 @@
                             <li data-nav='/groupBuy' :class='{"curPage":curPage("/groupBuy")}'>拼团</li>
                             <li data-nav='/spike' :class='{"curPage":curPage("/spike")}'>秒杀</li>
                             <li data-nav='/customerService' :class='{"curPage":curPage("/customerService")}'>在线客服系统</li>
+                            <li data-nav='/storeAssistant' :class='{"curPage":curPage("/storeAssistant")}'>店铺小助手</li>
                         </ul>
                     </collapse-item>
                     <!-- <collapse-item name="3">

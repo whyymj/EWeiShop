@@ -67,6 +67,10 @@ export default new Router({
       path: '/customerService',
       name: 'customerService',
       component: () => import('./views/customerService.vue')
+    },{
+      path: '/storeAssistant',
+      name: 'StoreAssistant',
+      component: () => import('./views/StoreAssistant.vue')
     }
   ]
 })
