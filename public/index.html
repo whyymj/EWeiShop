@@ -6,6 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>EWeiShop</title>
+  <script>
+    function IsPC() {//判断是否PC端
+      var userAgentInfo = navigator.userAgent;
+      var Agents = ["Android", "iPhone",
+        "SymbianOS", "Windows Phone",
+        "iPad", "iPod"
+      ];
+      var flag = true;
+      for (var v = 0; v < Agents.length; v++) {
+        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+          flag = false;
+          break;
+        }
+      }
+
+      return flag;
+    }
+
+    if (IsPC()&& window.location.href.indexOf('m.ewei.shop') > -1) {//如果是PC端则跳转到PC端官网
+      window.location.replace('http://ewei.shop/')
+    }
+  </script>
   <link rel="stylesheet" href="/static/style/global.css">
   <link rel="prefetch" href="https://m.wiki.ewei.shop/help/">
   <script type="text/javascript">
