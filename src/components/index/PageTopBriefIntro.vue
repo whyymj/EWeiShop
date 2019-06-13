@@ -12,6 +12,7 @@
                 <div style='height:100%;width:100%;' v-else>
                     <img v-lazy="item.img" alt="" style="width:100%;height:100%;" @click="goServiceActive(item.link)">
                 </div>
+                <img v-lazy="item.img" class='brief-bg__img' :class='item.theme?"":"notheme"' :alt="item.detail" @click="link(item)">
             </swipe-item>
             <div class="custom-indicator" slot="indicator">
                 <span class="point point1" v-for="(item,index) in swipeList" :key='index' :class='{"active-point":index==current}'></span>
@@ -39,26 +40,24 @@
                 detailLeftAlign: {
                     textAlign: 'left'
                 },
-                swipeList: [{
-                    img: '/static/image/index/banner-wap.jpg',
+                swipeList: [ {
+                    img: '/static/image/index/zhounianqing2019.png',
                     theme: '',
                     detail: '',
-                    link: '/actions'
-                }, 
-                // {
-                //     img: '/static/image/index/banner350.png',
-                //     theme: '',
-                //     detail: '',
-                //     link: '/custormServiceActive'
-                // },
-                 {
+                    link:'https://m.we7shop.com/act/182/index.html'
+                },{
                     img: '/static/image/index/banner_img.png',
                     theme: '新零售社交分销商城',
                     detail: '整合全渠道资源为您建立闭合的社交电商生态圈'
-                }]
+                },]
             }
         },
         methods: {
+            link(item){
+                if(item.link){
+                    window.location.href=item.link;
+                }
+            },
             onChange(index) {
                 this.current = index;
             },
@@ -101,6 +100,13 @@
             position: absolute;
             top: 50px;
             right: 32px;
+            &.notheme{
+                width: 100%;
+                height:100%;
+                position: absolute;
+                top:0;
+                left:0;
+            }
         }
         .custom-indicator {
             position: absolute;

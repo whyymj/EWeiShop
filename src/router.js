@@ -86,6 +86,10 @@ export default new Router({
       path: '/vipMarketing', //活动页
       name: 'VipMarketing',
       component: () => import('./views/VipMarketing.vue')
+    },{
+      path: '/storeAssistant',
+      name: 'StoreAssistant',
+      component: () => import('./views/StoreAssistant.vue')
     }
   ]
 })

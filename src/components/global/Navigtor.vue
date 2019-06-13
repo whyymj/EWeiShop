@@ -25,20 +25,23 @@
                             <li data-nav='/groupBuy' :class='{"curPage":curPage("/groupBuy")}'>拼团</li>
                             <li data-nav='/spike' :class='{"curPage":curPage("/spike")}'>秒杀</li>
                             <li data-nav='/customerService' :class='{"curPage":curPage("/customerService")}'>在线客服系统</li>
+                            <li data-nav='/storeAssistant' :class='{"curPage":curPage("/storeAssistant")}'>店铺小助手</li>
                             <li data-nav='/cardScreat' :class='{"curPage":curPage("/cardScreat")}'>电子卡密</li>
                             <li data-nav='/vipMarketing' :class='{"curPage":curPage("/vipMarketing")}'>会员营销</li>
                         </ul>
                     </collapse-item>
                     <!-- <collapse-item name="3">
-                        <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("3")>-1}' slot='right-icon' alt="新闻中心"> <span class='sub-title' slot='title'>新闻中心</span>
-                        <ul class='programs'>
-                            <li data-nav='/news/prod'>产品发布</li>
-                            <li data-nav='/news/info'>最新动态</li>
-                            <li data-nav='/news/log'>更新日志</li>
-                        </ul>
-                    </collapse-item> -->
+                            <img v-lazy="arrowDown" class='right-icon' :class='{"right-icon--open":activeNames.indexOf("3")>-1}' slot='right-icon' alt="新闻中心"> <span class='sub-title' slot='title'>新闻中心</span>
+                            <ul class='programs'>
+                                <li data-nav='/news/prod'>产品发布</li>
+                                <li data-nav='/news/info'>最新动态</li>
+                                <li data-nav='/news/log'>更新日志</li>
+                            </ul>
+                        </collapse-item> -->
                 </collapse>
-                <h2 class='nav__title nav__title--help'><router-link data-nav='/iframe/help'  :class='{"curPage":curPage("/iframe/help")}' to='/iframe/help' tag='a'>帮助中心</router-link></h2>
+                <h2 class='nav__title nav__title--help'>
+                    <router-link data-nav='/iframe/help' :class='{"curPage":curPage("/iframe/help")}' to='/iframe/help' tag='a'>帮助中心</router-link>
+                </h2>
                 <h2 class='nav__title nav__title--about-us' data-nav='/aboutus' :class='{"curPage":curPage("/aboutus")}'>关于我们</h2>
             </nav>
         </Popup>
@@ -140,7 +143,8 @@
             >.nav__logo {
                 width: 100%;
                 box-sizing: border-box;
-                border-bottom: 1px solid #eee;/*no*/
+                border-bottom: 1px solid #eee;
+                /*no*/
                 height: 88px;
                 position: relative;
                 >img {
