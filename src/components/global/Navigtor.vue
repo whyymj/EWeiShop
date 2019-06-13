@@ -110,7 +110,7 @@
         width: 100%;
         height: 88px;
         top: 0;
-        position: absolute;
+        position: fixed;
         z-index: 2000;
         background: #fff;
         border-bottom: 1px solid #eee;/*no*/

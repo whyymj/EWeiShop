@@ -20,6 +20,7 @@
 <script>
   import navigtor from './components/global/Navigtor';
   import pageFooter from './components/global/PageFooter'
+import { request } from 'http';
   export default {
     components: {
       navigtor,
@@ -59,7 +60,7 @@
     mounted() {
       /**
        * 关于我们以及跳转外连接时，隐藏footer
-       */
+       */ 
       setTimeout(() => {
         document.getElementById('firstShow').style = 'display:none';
       }, 0);
@@ -93,20 +94,17 @@
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    position: absolute;
+    overflow: auto;
     width: 100%;
-    height: 100%;
+    height:fit-content;
     box-sizing: border-box;
-    top: 0;
-    left: 0;
+    padding: 89px 0 95px;
+
     &>.app_container {
-      overflow: scroll;
+      overflow: hidden;
       -webkit-overflow-scrolling: touch;
-      position: absolute;
       width: 100%;
-      top: 90px;
-      left: 0;
-      bottom: 96px;
+      height:fit-content;
       box-sizing: border-box;
     }
     .navigator {
@@ -165,7 +163,7 @@
     >.navigator__adv {
       height: 98px;
       width: 100%;
-      position: absolute;
+      position: fixed;
       overflow: hidden;
       z-index: 1999;
       bottom: 0;

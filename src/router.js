@@ -23,7 +23,7 @@ export default new Router({
     {
       path: '/aboutus', //关于我们
       name: 'about',
-      component: () => import( /* webpackChunkName: "about" */ './views/AboutUs.vue')
+      component: () => import(  './views/AboutUs.vue')
     },
     {
       path: '/news/:type', //新闻中心

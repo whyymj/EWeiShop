@@ -20,7 +20,6 @@
           break;
         }
       }
-
       return flag;
     }
 
@@ -116,7 +115,15 @@
       animation-name: fadeInUp;
       animation-duration: 1.4s;
     }
- 
+
+    body {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      overflow: auto;
+    }
   </style>
 </head>
 
@@ -135,25 +142,16 @@
   <!-- built files will be auto injected -->
   <script src='/static/js/rem.js' async></script>
   <script>
-    // window.addEventListener("load", function () {
-      // if (document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
-      //   bodyTag = document.getElementsByTagName('body')[0];
+    window.addEventListener("load", function () {
+    if (document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
+      bodyTag = document.getElementsByTagName('body')[0];
+      bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px';
+    } 
+    setTimeout(function () {
+      window.scrollTo(0, 1);
+    }, 100);
 
-      //   bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px';
-      // }
-      // var app = '';
-      // bodyTag.onscroll = function () {
-      //   if (!app) {
-      //     app = document.getElementById('app');
-      //   } else {
-      //     app.style.height = bodyTag.style.height;
-      //   }
-      // }
-      // setTimeout(function () {
-      //   window.scrollTo(0, 1);
-      // }, 100);
-
-    // });
+    });
   </script>
 </body>
 
