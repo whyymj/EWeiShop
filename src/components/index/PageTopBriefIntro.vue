@@ -44,12 +44,14 @@
                     theme: '',
                     detail: '',
                     link: '/actions'
-                }, {
-                    img: '/static/image/index/banner350.png',
-                    theme: '',
-                    detail: '',
-                    link: '/custormServiceActive'
-                }, {
+                }, 
+                // {
+                //     img: '/static/image/index/banner350.png',
+                //     theme: '',
+                //     detail: '',
+                //     link: '/custormServiceActive'
+                // },
+                 {
                     img: '/static/image/index/banner_img.png',
                     theme: '新零售社交分销商城',
                     detail: '整合全渠道资源为您建立闭合的社交电商生态圈'

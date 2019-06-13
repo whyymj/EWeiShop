@@ -6,6 +6,8 @@ import MetaInfo from 'vue-meta-info'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css';
 import 'vant/lib/index.css';
+import axios from 'axios';
+
 import {
   Lazyload
 } from 'vant';
@@ -23,7 +25,7 @@ Vue.use(VueLazyload, {
 Vue.use(VueAwesomeSwiper, /* { default global options } */ )
 Vue.use(MetaInfo)
 Vue.config.productionTip = false
-
+Vue.prototype.$axios=axios;
 new Vue({
   router,
   render: h => h(App)

@@ -10,7 +10,6 @@
             <a class="service__box__item service__box__num" :href='"tel:"+curServer.tel'>{{curServer.tel}}</a>
         </div>
         <span class="service__info">青岛易联互动网络科技有限公司版权所有<br/>©2016-2018鲁ICP备18044507号</span>
-        
     </div>
 </template>
 
@@ -28,37 +27,12 @@
         },
         data() {
             return {
-                serverList: [{
-                    name: '王琦',
-                    qq: '3004648558',
-                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=3004648558&site=qq&menu=yes",
-                    wxQR: '/static/image/customer/codeqi.png',
-                    tel: '186-6177-2381'
-                }, {
-                    name: '王萱萱',
-                    qq: '3003387764',
-                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=3003387764&site=qq&menu=yes",
-                    wxQR: '/static/image/customer/codexuan.jpg',
-                    tel: '158-6554-6761'
-                }, {
-                    name: '潇潇',
-                    qq: '3001610941',
-                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=3001610941&site=qq&menu=yes",
-                    wxQR: '/static/image/customer/codexiao.jpg',
-                    tel: '176-8578-1337'
-                }, {
-                    name: '环环',
-                    qq: '3001677311',
-                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=3001677311&site=qq&menu=yes",
-                    wxQR: '/static/image/customer/codehuan.jpg',
-                    tel: '186-6173-1192'
-                }],
                 curServer: {
-                    name: '王琦',
-                    qq: '3004648558',
-                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=3004648558&site=qq&menu=yes",
-                    wxQR: '/static/image/customer/codeqi.png',
-                    tel: '186-6177-2381'
+                    name: '',
+                    qq: '',
+                    qqHref: "",
+                    wxQR: '',
+                    tel: ''
                 }
             }
         },
@@ -68,7 +42,16 @@
             }
         },
         beforeMount() {
-            this.curServer = this.serverList[this.random()]
+            this.$axios.get('https://wiki.ewei.shop/api/customer/get').then(res => { 
+                let data = res.data.customer;
+                this.curServer = {
+                    name: data.name,
+                    qq: data.qq,
+                    qqHref: "http://wpa.qq.com/msgrd?v=3&uin=" + data.qq + "&site=qq&menu=yes",
+                    wxQR: data.headimg,
+                    tel: data.mobile
+                }
+            })
         }
     }
 </script>
@@ -111,8 +94,10 @@
                 width: 300px;
                 height: 98px;
                 line-height: 98px;
-                border-top: 1px solid #eee;/*no*/
-                border-bottom: 1px solid #eee;/*no*/
+                border-top: 1px solid #eee;
+                /*no*/
+                border-bottom: 1px solid #eee;
+                /*no*/
                 display: flex;
                 justify-content: center;
                 top: 191px;

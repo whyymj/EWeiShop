@@ -26,6 +26,7 @@
                             <li data-nav='/spike' :class='{"curPage":curPage("/spike")}'>秒杀</li>
                             <li data-nav='/customerService' :class='{"curPage":curPage("/customerService")}'>在线客服系统</li>
                             <li data-nav='/cardScreat' :class='{"curPage":curPage("/cardScreat")}'>电子卡密</li>
+                            <li data-nav='/vipMarketing' :class='{"curPage":curPage("/vipMarketing")}'>会员营销</li>
                         </ul>
                     </collapse-item>
                     <!-- <collapse-item name="3">

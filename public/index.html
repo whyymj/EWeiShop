@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>EWeiShop</title>
   <script>
-    function IsPC() {//判断是否PC端
+    function IsPC() { //判断是否PC端
       var userAgentInfo = navigator.userAgent;
       var Agents = ["Android", "iPhone",
         "SymbianOS", "Windows Phone",
@@ -20,22 +20,21 @@
           break;
         }
       }
-      
+
       return flag;
     }
-    
-    if (IsPC()&& window.location.href.indexOf('m.ewei.shop') > -1) {//如果是PC端则跳转到PC端官网
+
+    if (IsPC() && window.location.href.indexOf('m.ewei.shop') > -1) { //如果是PC端则跳转到PC端官网
       window.location.replace('http://ewei.shop/')
     }
   </script>
   <link rel="stylesheet" href="/static/style/global.css">
   <link rel="prefetch" href="https://m.wiki.ewei.shop/help/">
   <script type="text/javascript">
-    　　document.documentElement.style.fontSize = document.documentElement.clientWidth / 640*100 + 'px';
+    document.documentElement.style.fontSize = document.documentElement.clientWidth / 640 * 100 + 'px';
   </script>
 
   <style>
-    
     img[lazy='loading'] {
       width: 24px !important;
       height: 24px !important;
@@ -117,6 +116,10 @@
       animation-name: fadeInUp;
       animation-duration: 1.4s;
     }
+
+    body {
+      background: #f00;
+    }
   </style>
 </head>
 
@@ -134,6 +137,27 @@
 
   <!-- built files will be auto injected -->
   <script src='/static/js/rem.js' async></script>
+  <script>
+    // window.addEventListener("load", function () {
+      // if (document.documentElement.scrollHeight <= document.documentElement.clientHeight) {
+      //   bodyTag = document.getElementsByTagName('body')[0];
+
+      //   bodyTag.style.height = document.documentElement.clientWidth / screen.width * screen.height + 'px';
+      // }
+      // var app = '';
+      // bodyTag.onscroll = function () {
+      //   if (!app) {
+      //     app = document.getElementById('app');
+      //   } else {
+      //     app.style.height = bodyTag.style.height;
+      //   }
+      // }
+      // setTimeout(function () {
+      //   window.scrollTo(0, 1);
+      // }, 100);
+
+    // });
+  </script>
 </body>
 
 </html>

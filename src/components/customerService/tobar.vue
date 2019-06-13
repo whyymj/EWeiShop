@@ -40,11 +40,13 @@
                 detailLeftAlign: {
                     textAlign: 'left'
                 },
-                swipeList: [{
-                    img: '/static/image/index/banner350.png',
-                    theme: '',
-                    detail: ''
-                }, {
+                swipeList: [
+                //     {
+                //     img: '/static/image/index/banner350.png',
+                //     theme: '',
+                //     detail: ''
+                // }, 
+                {
                     img: '/static/image/customerService/banner-img.png',
                     theme: '在线客服系统',
                     detail: '加强商家与客户之间的沟通,是网络营销最重要的工具'
