@@ -94,10 +94,8 @@
                 width: 300px;
                 height: 98px;
                 line-height: 98px;
-                border-top: 1px solid #eee;
-                /*no*/
-                border-bottom: 1px solid #eee;
-                /*no*/
+                border-top: 1px solid #eee;/*no*/
+                border-bottom: 1px solid #eee;/*no*/
                 display: flex;
                 justify-content: center;
                 top: 191px;

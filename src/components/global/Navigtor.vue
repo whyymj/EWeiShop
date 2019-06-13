@@ -113,8 +113,7 @@
         position: absolute;
         z-index: 2000;
         background: #fff;
-        border-bottom: 1px solid #eee;
-        /*no*/
+        border-bottom: 1px solid #eee;/*no*/
         .curPage {
             color: #fb6638!important;
         }
@@ -143,8 +142,7 @@
             >.nav__logo {
                 width: 100%;
                 box-sizing: border-box;
-                border-bottom: 1px solid #eee;
-                /*no*/
+                border-bottom: 1px solid #eee;/*no*/
                 height: 88px;
                 position: relative;
                 >img {

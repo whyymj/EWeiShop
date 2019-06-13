@@ -107,10 +107,8 @@
             transform: translate(-50%, 0);
             >.point {
                 box-sizing: border-box;
-                width: 4px;
-                /*no*/
-                height: 4px;
-                /*no*/
+                width: 4px;/*no*/
+                height: 4px;/*no*/
                 border-radius: 4px;
                 float: left;
                 margin-right: 6px;

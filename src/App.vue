@@ -152,8 +152,7 @@
       margin: auto;
       height: 132px;
       box-sizing: border-box;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-      /*no*/
+      border-top: 1px solid rgba(255, 255, 255, 0.1);/*no*/
       padding: 36px 0 0 0;
       >span {
         display: block;

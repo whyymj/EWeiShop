@@ -124,8 +124,7 @@
                     right: 0;
                     margin: auto;
                     bottom: 0;
-                    border-top: 1px solid #eee;
-                    /*no*/
+                    border-top: 1px solid #eee;/*no*/
                     color: #f8572b;
                     text-align: center;
                     line-height: 60px;

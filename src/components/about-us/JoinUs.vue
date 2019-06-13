@@ -67,8 +67,7 @@
             box-shadow: 0 0 0 0 rgba(251, 102, 56, .5);
         }
         100% {
-            box-shadow: 0 0 0 3px rgba(251, 102, 56, .5);
-            /*no*/
+            box-shadow: 0 0 0 3px rgba(251, 102, 56, .5); /*no*/
         }
     }
     .join-us {
@@ -133,10 +132,8 @@
                             &:after {
                                 content: '';
                                 position: absolute;
-                                width: 6px;
-                                /*no*/
-                                height: 6px;
-                                /*no*/
+                                width: 6px; /*no*/
+                                height: 6px; /*no*/
                                 border-radius: 50%;
                                 top: 14px;
                                 left: -32px;
