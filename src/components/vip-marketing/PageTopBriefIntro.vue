@@ -28,7 +28,7 @@
         width: 100%;
         height: 350px;
         position: relative;
-        background: linear-gradient(to right, #f84753, #ff6b5c);
+        background: linear-gradient(to right, #f84753,#fc5954, #ff6b5c);
         overflow: hidden;
         >.brief-bg__word {
             position: absolute;

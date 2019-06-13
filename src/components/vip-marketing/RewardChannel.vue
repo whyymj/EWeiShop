@@ -67,7 +67,7 @@
         .brief-bg__img2{
             width:634px;
             display: block;
-            margin:0 auto 20px;
+            margin:0 auto 60px;
         }
     }
 </style>

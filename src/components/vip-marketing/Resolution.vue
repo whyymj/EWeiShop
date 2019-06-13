@@ -25,15 +25,15 @@
                     title: '邀请奖励',
                     detail: '老客带新'
                 }, {
-                    img: '/static/image/vipMarketing/1_1_m_pic.png',
+                    img: '/static/image/vipMarketing/1_2_m_pic.png',
                     title: '新人礼',
                     detail: '高效拉新'
                 }, {
-                    img: '/static/image/vipMarketing/1_1_m_pic.png',
+                    img: '/static/image/vipMarketing/1_3_m_pic.png',
                     title: '消费奖励',
                     detail: '促进活跃'
                 }, {
-                    img: '/static/image/vipMarketing/1_1_m_pic.png',
+                    img: '/static/image/vipMarketing/1_4_m_pic.png',
                     title: '充值奖励',
                     detail: '提升复购'
                 }, ]
@@ -55,14 +55,14 @@
             >.resolution-list__item {
                 width: 326px;
                 height: 308px;
-                margin: 0 9px 0;
+                margin: 0 9px 30px;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
                 >.resolution-list__item__icon {
-                    width: 160px;
-                    height: 160px;
-                    margin: 0 0 16px;
+                    width: 200px;
+                    height: 200px;
+                    margin: 0 0 27px;
                 }
                 >.resolution-list__item__title {
                     width: 100%;
@@ -70,7 +70,7 @@
                     text-align: center;
                     color: #3b426b;
                     line-height: 28px;
-                    margin: 0 0 5px;
+                    margin: 0 0 10px;
                     font-weight: 500;
                 }
                 >.resolution-list__item__detail {
